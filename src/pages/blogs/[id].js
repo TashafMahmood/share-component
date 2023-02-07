@@ -6,11 +6,32 @@ function BlogsDetails(props) {
   return (
     <div>
       <Head>
-        <meta property="og:title" content={data.name} key="title" />
-        <meta property="og:image" content={data.image.medium} key="image" />
-        <meta property="og:description" content={data.summary} />
+        <meta property="og:title" content={data?.name ?? ""} key="title" />
+        <meta
+          property="og:image"
+          content={data?.image?.medium ?? ""}
+          key="image"
+        />
+        <meta property="og:description" content={data?.summary ?? ""} />
       </Head>
-      <div>details page</div>
+      <div>
+        <div className="card m-2 col-4">
+          <img
+            className="card-img-top"
+            src={data?.show?.image?.medium ?? ""}
+            alt="Card image cap"
+            height={300}
+          />
+          <div className="card-body">
+            <h5 className="card-title">{data?.show?.name ?? ""}</h5>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: data?.show?.summary ?? "",
+              }}
+            ></div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -20,7 +41,7 @@ export async function getServerSideProps(context) {
   const { query } = context;
 
   const res = await fetch(
-    `https://api.tvmaze.com/lookup/shows?thetvdb=${query.id}`
+    `https://api.tvmaze.com/lookup/shows?thetvdb=${query?.id}`
   );
   const data = await res.json();
 

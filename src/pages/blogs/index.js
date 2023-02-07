@@ -30,21 +30,38 @@ function Blogs() {
             <div key={index} className="card m-2 col-4">
               <img
                 className="card-img-top"
-                src={item.show.image.medium}
+                src={item?.show?.image?.medium ?? ""}
                 alt="Card image cap"
                 height={300}
               />
               <div className="card-body">
-                <h5 className="card-title">{item.show.name}</h5>
+                <h5 className="card-title">{item?.show?.name ?? ""}</h5>
                 <div
-                  dangerouslySetInnerHTML={{ __html: item.show.summary }}
+                  dangerouslySetInnerHTML={{
+                    __html: item?.show?.summary ?? "",
+                  }}
                 ></div>
-                <Link
-                  href={`blogs/${item.show.externals.thetvdb}`}
-                  className="btn btn-primary"
-                >
-                  Go somewhere
-                </Link>
+
+                <div className="d-flex justify-content-between">
+                  <Link
+                    href={`blogs/${item?.show?.externals?.thetvdb ?? ""}`}
+                    className="btn btn-primary"
+                  >
+                    Go somewhere
+                  </Link>
+                  <button
+                    className="btn btn-outline"
+                    onClick={() => {
+                      navigator.clipboard.writeText(
+                        `https://share-component.vercel.app/blogs/${
+                          item?.show?.externals?.thetvdb ?? ""
+                        }`
+                      );
+                    }}
+                  >
+                    copy
+                  </button>
+                </div>
               </div>
             </div>
           );
