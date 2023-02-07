@@ -10,13 +10,12 @@ function Blogs() {
   }, []);
 
   const getNews = () => {
-    const url =
-      "https://newsapi.org/v2/top-headlines?country=us&apiKey=d8cf5650fc70480592446a6fee1196e1";
+    const url = "https://api.tvmaze.com/search/shows?q=girls";
 
     axios
       .get(url)
       .then((res) => {
-        setBlogs(res?.data?.articles ?? []);
+        setBlogs(res?.data ?? []);
         console.log(res);
       })
       .catch((err) => {
@@ -31,13 +30,15 @@ function Blogs() {
             <div key={index} className="card m-2 col-4">
               <img
                 className="card-img-top"
-                src={item.urlToImage}
+                src={item.show.image.medium}
                 alt="Card image cap"
                 height={300}
               />
               <div className="card-body">
-                <h5 className="card-title">{item.title}</h5>
-                <p className="card-text">{item.description}</p>
+                <h5 className="card-title">{item.show.name}</h5>
+                <div
+                  dangerouslySetInnerHTML={{ __html: item.show.summary }}
+                ></div>
                 <Link href={`blogs/${item.title}`} className="btn btn-primary">
                   Go somewhere
                 </Link>
