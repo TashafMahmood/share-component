@@ -8,6 +8,7 @@ function BlogsDetails(props) {
       <Head>
         <meta property="og:title" content={data.name} key="title" />
         <meta property="og:image" content={data.image.medium} key="image" />
+        <meta property="og:description" content={data.summary} />
       </Head>
       <div>details page</div>
     </div>
