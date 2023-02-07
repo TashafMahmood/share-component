@@ -40,7 +40,7 @@ function Blogs() {
                   dangerouslySetInnerHTML={{ __html: item.show.summary }}
                 ></div>
                 <Link
-                  href={`blogs/${item.show.name}`}
+                  href={`blogs/${item.show.externals.thetvdb}`}
                   className="btn btn-primary"
                 >
                   Go somewhere
