@@ -19,7 +19,7 @@ function BlogsDetails(props) {
               />
               <meta
                   property='og:image'
-                  content={'https://random.imagecdn.app/500/150'}
+                  content={`https://random.imagecdn.app/500/150?a=${Math.random()}`}
                   key='image'
               />
               <meta property='og:description' content={data?.summary ?? ''} />
