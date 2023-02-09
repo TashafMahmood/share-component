@@ -6,10 +6,9 @@ function BlogsDetails(props) {
   return (
       <div>
           <Head>
-              <meta
-                  httpEquiv='Cache-Control'
-                  content='no-cache, no-store, must-revalidate'
-              />
+              <meta http-equiv='Cache-Control' content='public' />
+              <meta http-equiv='Cache-Control' content='max-age=1' />
+              <meta http-equiv='Cache-Control' content='must-revalidate' />
               <meta httpEquiv='Pragma' content='no-cache' />
               <meta httpEquiv='Expires' content='0' />
               .
