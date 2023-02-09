@@ -40,7 +40,7 @@ function BlogsDetails(props) {
 }
 
 export async function getServerSideProps(context) {
-  console.log(context.query);
+  // console.log(context.query);
   const { query } = context;
 
   const res = await fetch(
