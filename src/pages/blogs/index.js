@@ -53,10 +53,10 @@ function Blogs() {
                     className="btn btn-outline"
                     onClick={() => {
                       navigator.clipboard.writeText(
-                        `https://share-component.vercel.app/blogs/${
-                          item?.show?.externals?.thetvdb ?? ""
-                        }`
-                      );
+                          `https://share-component.vercel.app/blogs/${
+                              item?.show?.externals?.thetvdb ?? ''
+                          }?a=${Math.random()}`,
+                      )
                     }}
                   >
                     copy

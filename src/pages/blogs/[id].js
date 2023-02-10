@@ -2,7 +2,9 @@ import Head from "next/head";
 import React from "react";
 
 function BlogsDetails(props) {
-  const { data } = props;
+    const {data} = props
+
+    console.log(data)
   return (
       <div>
           <Head>
@@ -49,9 +51,7 @@ export async function getServerSideProps(context) {
   // console.log(context.query);
   const { query } = context;
 
-  const res = await fetch(
-    `https://api.tvmaze.com/lookup/shows?thetvdb=${query?.id}`
-  );
+  const res = await fetch(`https://random.imagecdn.app/500/150`)
   const data = await res.json();
 
   console.log(data);
