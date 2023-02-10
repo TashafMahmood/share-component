@@ -33,9 +33,10 @@ function BlogsDetails(props) {
     )
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({res, query}) {
     // console.log(context.query);
     const {query} = context
+    res.setHeader('Cache-Control', 'no-store')
 
     const res = await fetch(`https://share-component.vercel.app/api/hello`)
     const data = await res.json()
