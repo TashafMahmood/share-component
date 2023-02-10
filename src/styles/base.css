@@ -1,0 +1,2936 @@
+/*
+This file inherits all the styles from DefaultStyle.css
+Please make sure that the following import link is present if you want to inherit default styles.
+Any changes in fonts, colours, layout, etc. can be done via overriding CSS style elements after the import statement.
+
+Good CSS guide is located at
+
+http://www.htmlhelp.com/reference/css/
+
+*/
+@import url(DefaultStyle.css);
+
+/* put your changes below this comment */
+:root {
+    --color-white--: #fff;
+    --color-grey--: #646569;
+    --color-dkgreen--: #007581;
+    --color-yellow--: #f9da3f;
+    --color-green--: #74c095;
+    --color-black--: #000;
+}
+
+body {
+    background-image: url(images/BG.gif);
+    background-color: none;
+    background-position: left top;
+    background-repeat: no-repeat;
+    color: #666666;
+    padding: 0;
+    margin: 0;
+    font-size: 11px;
+    height: 100%;
+}
+
+#OuterContentPane {
+    padding: 15px 30px 20px 30px;
+    background: none;
+    border-left: 0px solid;
+    border-left-color: #ffffff;
+    border-right: 0px solid;
+    border-right-color: #ffffff;
+}
+
+#pagehead {
+    height: 204px;
+    border-bottom: 0px solid #000000;
+}
+
+#topbar1 {
+    color: #ffffff;
+    background: url(images/TopR.gif) no-repeat top left;
+    height: 204px;
+    background: none;
+}
+
+#topbar2 {
+    color: #ffffff;
+    background: url(images/Top.gif) no-repeat top left;
+    height: 204px;
+    background: none;
+}
+
+.loginBox {
+    border: 1px solid #dfdfdf;
+    background: #ddedf5 url(images/Boxag.gif) repeat-x top left;
+    color: #666666;
+    padding: 10px 10px 10px 10px;
+    width: 250px;
+}
+
+.loginBox input[type="text"],
+.loginBox input[type="password"] {
+    width: 249px;
+}
+
+.loginBox a,
+.loginBox a:visited {
+    color: #666666;
+}
+
+.loginBox a:hover {
+    color: #000000;
+}
+
+.LoginInstruction {
+    position: absolute;
+    border: 1px solid #dfdfdf;
+    background: url(images/BoxBg.gif) repeat-x top left;
+    color: #666666;
+    padding: 15px;
+    left: 334px;
+    top: 220px;
+    right: 16px;
+    height: 322px;
+}
+
+#LoginStatusString {
+    text-align: right;
+    color: var(--color-white--);
+    background: none;
+    top: 41%;
+    right: -2%;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+#menu {
+    text-decoration: none;
+    font-weight: normal;
+    background: none;
+    text-align: center;
+    font-size: 9pt;
+    left: 231px;
+    top: 175px;
+    font-variant: normal;
+    line-height: 26px;
+    /*text-transform: uppercase;*/
+}
+
+#menu li {
+    width: 150px;
+    height: 26px;
+    color: var(--color-green--);
+    text-decoration: none;
+    /* background: url(images/MButtH.gif) no-repeat top left; */
+    background-color: var(--color-dkgreen--);
+    border: 0px solid;
+}
+
+#menu a,
+#menu a:visited {
+    color: white;
+    background-color: var(--color-dkgreen--);
+    text-decoration: none;
+    display: inline-block;
+}
+
+#menu a:hover {
+    color: var(--color-yellow--);
+    text-decoration: none;
+    background: none !important;
+}
+
+.DetailsTable {
+    padding: 0px;
+    font-size: 11px;
+}
+
+.DetailsTable td {
+    border: 1px solid #999999;
+    /* padding: 1px; */
+    padding: 0.3rem;
+}
+
+.DetailsHeader {
+    color: #005596;
+    font-size: 12px;
+    vertical-align: middle;
+    line-height: 24px;
+}
+
+.DetailsHeader td {
+    background-image: url(images/MButt.gif);
+    background-repeat: repeat;
+    background-position: top left;
+    background-size: cover;
+}
+
+.DetailsHeader a {
+    color: #005596;
+    font-weight: Normal;
+}
+
+.DetailsHeader a:hover {
+    color: #000000;
+}
+
+a,
+a:visited {
+    color: #666666;
+    background: inherit;
+}
+
+a:hover {
+    color: #000000;
+    background: inherit;
+}
+
+select,
+input {
+    font-size: 11px;
+}
+
+.ContentSection {
+    padding-left: 0px;
+    margin-top: 10px;
+    padding-bottom: 0px;
+    background: none;
+}
+
+.DetailsCell {
+    color: #666666;
+    background: none;
+}
+
+.DetailsAlternatingCell {
+    color: #666666;
+    /* background: #ebf9fe; */
+    background-color: #f9da3f3b;
+}
+
+.TimeLineLegend {
+    display: inline-block;
+    font-weight: bold;
+    background: none;
+    color: #000000;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    border: solid 1px gray;
+}
+
+.TimeLineOverdue {
+    background: #ffb6c1;
+    color: #000000;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.TimeLinePending {
+    background: #ffff00;
+    color: #000000;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.TimeLineCompleted {
+    background: #98fb98;
+    color: #000000;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.TimeLineCompletedLate {
+    background: #ffcc99;
+    color: #000000;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.TimeLineEstimate {
+    font-style: italic;
+    color: #000000;
+    background: inherit;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.Button.FilterStripGroup_none {
+    background-color: #ffffff;
+}
+
+td.EDocsDownload {
+    width: 60px;
+}
+
+td.EDocsDownload.HasEDocs {
+    background: url(images/page.png) no-repeat center left;
+    background-position-x: 3px;
+}
+
+#pagefooter {
+    text-align: left;
+    padding-top: 8px;
+    border-top: 0px solid #000000;
+    border-bottom: 0px solid #000000;
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 30px;
+    color: #666666;
+    font-size: 9px;
+    padding-left: 24px;
+    background: #dfdfe0;
+}
+
+#PageFooter a,
+#PageFooter a:visited {
+    color: #666666;
+    font-size: 10px;
+}
+
+#PageFooter a:hover {
+    color: #000000;
+    font-size: 10px;
+}
+
+#LanguageSelection {
+    position: absolute;
+    right: 10px;
+}
+
+/* ----------------------- */
+#menu li:nth-child(3) ul li:first-child {
+    display: none;
+}
+
+#ctl07_SearchResultsDataGridController_Header input {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--);
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+}
+
+#ctl07_FilterControlUpdatePanel #ctl07_ctl01_Table tbody tr:last-child td:first-child span:last-child input {
+    float: none !important;
+    background-color: var(--color-grey--);
+    color: var(--color-white--) !important;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+#ctl09_SearchResultsDataGridController_Header input {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--);
+    padding: 0.3rem;
+}
+
+#ctl09_FilterControlUpdatePanel #ctl09_ctl01_Table tbody tr:last-child td:first-child span:last-child input {
+    float: none !important;
+    background-color: var(--color-grey--);
+    color: var(--color-white--) !important;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+#ctl09_SearchResultsDataGridController_Buttons {
+    margin-bottom: 0.5rem;
+}
+
+#ctl09_SearchResultsDataGridController_Buttons input {
+    margin-right: 0.5rem;
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--) !important;
+    padding: 0.3rem 0.2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.2rem;
+}
+
+#ctl07_SearchResultsDataGridController_Buttons {
+    margin-bottom: 0.5rem;
+}
+
+#ctl07_SearchResultsDataGridController_Buttons #ctl07_SearchResultsDataGridController_SearchResultsDataGrid_ExcelButton,
+#ctl07_SearchResultsDataGridController_Buttons #ctl07_SearchResultsDataGridController_SearchResultsDataGrid_CustomizeButton,
+#ctl07_SearchResultsDataGridController_Buttons #ctl07_SearchResultsDataGridController_btnCustomerButton1SearchControl,
+#ctl07_SearchResultsDataGridController_Buttons #ctl07_SearchResultsDataGridController_btnViewButtonSearchControl {
+    margin-right: 0.5rem;
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--) !important;
+    padding: 0.3rem 0.2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.2rem;
+}
+
+#menu>li:nth-child(2) {
+    display: none;
+}
+
+@media only screen and (max-width: 991.98px) {
+    .table-wrapper {
+        overflow: auto;
+    }
+}
+
+#contact-lists {
+    font-size: 14px;
+}
+
+#contact-lists table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 2px;
+    margin: 15px 0;
+}
+
+#login-contact-lists table tbody tr {
+    cursor: pointer;
+}
+
+#contact-lists table th {
+    background-color: #ededed;
+    text-align: left;
+}
+
+#contact-lists table tr:nth-child(2n) td {
+    background-color: #f5f5f5;
+}
+
+#contact-lists table th,
+#contact-lists table td {
+    padding: 8px 10px;
+}
+
+#contact-lists table tr.selected td {
+    background-color: #e6ffe6;
+}
+
+#contact-lists table tr.selected td:first-child {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='20' height='20'><path fill='%23009900' d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z'></path></svg>");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+#contact-lists table tr td:first-child input[type="radio"] {
+    visibility: hidden;
+}
+
+/* --Login-- */
+
+.LoginBody #Form1 {
+    background: url(images/background.png) center center no-repeat fixed;
+    background-size: cover;
+    margin: auto;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    height: calc(100% - 2rem);
+}
+
+.LoginBody #pagehead {
+    height: 397px;
+}
+
+.LoginBody #OuterContentPane {
+    border: none;
+    background-color: var(--color-white--);
+    width: 300px;
+    border-radius: 0px 8px 8px 0px;
+    padding: 0.2rem 0.8rem;
+    opacity: 0.9;
+    font-size: 0.8rem;
+}
+
+.LoginBody #topbar1 {
+    display: flex;
+    background-color: var(--color-dkgreen--);
+    align-items: center;
+    border-radius: 8px 0px 0px 8px;
+    height: 397px;
+}
+
+.LoginBody .LogoImage img {
+    width: 332px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.LoginBody #OuterContentPane #loginBox #CompanyCode,
+.LoginBody #OuterContentPane #loginBox#CompanyCodeTextBox,
+.LoginBody #OuterContentPane #loginBox #LoginNameTextBox,
+.LoginBody #OuterContentPane #loginBox #PasswordTextBox,
+.LoginBody #OuterContentPane #loginBox #SigninBtn,
+.LoginBody #OuterContentPane #QuickViewDetails #ViewShipmentDetails,
+.LoginBody #OuterContentPane #QuickViewDetails #ViewContainerDetails {
+    margin-bottom: 12px;
+}
+
+.LoginBody #OuterContentPane #loginBox #SigninBtn {
+    margin-top: 12px;
+}
+
+/* .LoginBody #OuterContentPane #loginBox input {
+  font-size: 11px;
+} */
+.LoginBody #OuterContentPane br:nth-child(2),
+.LoginBody #OuterContentPane br:nth-child(3),
+.LoginBody #OuterContentPane br:nth-child(5),
+.LoginBody #OuterContentPane br:nth-child(6),
+.LoginBody #OuterContentPane #loginBox br:nth-child(11) {
+    display: none;
+}
+
+.LoginBody #OuterContentPane .loginBox input[type="text"],
+.LoginBody #OuterContentPane .loginBox input[type="password"] {
+    width: 285px;
+}
+
+.LoginBody #OuterContentPane #loginBox #CompayCode {
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.LoginBody #OuterContentPane .loginBox {
+    color: var(--color-gray1);
+    border: none;
+    background-color: none;
+    background: 0;
+    padding: 4px 4px 4px 4px;
+    width: 284px;
+}
+
+.LoginBody #OuterContentPane .loginBox #ViewShipmentDetails br:nth-child(3),
+.LoginBody #OuterContentPane .loginBox #ViewShipmentDetails br:last-child {
+    display: none;
+}
+
+.LoginBody #OuterContentPane .loginBox .loginBox input[type="text"],
+.LoginBody #OuterContentPane .loginBox .loginBox input[type="password"] {
+    width: 235px;
+    height: 1.8rem;
+    margin: 0.5rem 0rem;
+    border: 1px solid var(--color-gray1);
+    border-radius: 5px;
+}
+
+.LoginBody #OuterContentPane .loginBox .loginBox a,
+.LoginBody #OuterContentPane .loginBox .loginBox a:visited {
+    color: var(--color-gray1);
+    margin: 0.5rem 0rem;
+}
+
+.LoginBody #OuterContentPane .loginBox #SigninBtn:hover,
+.LoginBody #OuterContentPane .loginBox #FindBtn:hover {
+    cursor: pointer;
+    background-color: var(--color-yellow--);
+    color: var(--color-grey--);
+}
+
+.LoginBody #OuterContentPane .loginBox #SigninBtn,
+.LoginBody #OuterContentPane .loginBox #FindBtn {
+    margin-bottom: 0.5rem;
+    border: 0;
+    padding: 0.4rem 0.6rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+}
+
+.LoginBody #OuterContentPane .loginBox input:focus-visible {
+    outline-color: var(--color-dkgreen--);
+}
+
+.LoginBody #OuterContentPane .loginBox #PasswordReminder:hover {
+    color: var(--color-dkgreen--);
+}
+
+.LoginBody #PageFooter {
+    position: absolute;
+    top: 722px;
+    bottom: 0px;
+}
+
+/* --Shipment---- */
+form#Form1[action^="./Shipments.aspx"] #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form#Form1[action^="./Shipments.aspx"] .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+form#Form1[action^="./Shipments.aspx"] .DetailsHeader {
+    font-weight: 100;
+}
+
+form#Form1[action^="./Shipments.aspx"] .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+form#Form1[action^="./Shipments.aspx"] .DetailsHeader a {
+    color: var(--color-white--);
+    text-decoration: none;
+}
+
+form#Form1[action^="./Shipments.aspx"] #ctl04_menu #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+form#Form1[action="./Shipments.aspx"] #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    width: 94%;
+}
+
+form#Form1[action="./Shipments.aspx"] #OuterContentPane .FilterStripControl .Button {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--) !important;
+    border-radius: 0.2rem;
+}
+
+form#Form1[action="./Shipments.aspx"] #OuterContentPane .FilterStripControl tr td select {
+    border-radius: 0.2rem;
+    padding: 0.24rem;
+    color: var(--color-gray1);
+    margin-bottom: 1rem;
+}
+
+form#Form1[action="./Shipments.aspx"] #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+form#Form1[action="./Shipments.aspx"] #OuterContentPane .FilterStripControl {
+    width: 100%;
+    border-spacing: 1px;
+}
+
+.ShipmentDetailsBody #EditButtonDiv {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ShipmentDetailsBody #EditButtonDiv #DuplicateShipment,
+.ShipmentDetailsBody #EditButtonDiv #ReverseShipment {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--) !important;
+    padding: 0.3rem 0.2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.2rem;
+}
+
+.ShipmentDetailsBody #OnBoardRow,
+.ShipmentDetailsBody #OwnersRefRow,
+.ShipmentDetailsBody #ChargesApplyRow,
+.ShipmentDetailsBody #ForAuthentifiedUserOnly4,
+.ShipmentDetailsBody #GoodsPickedUpRow,
+.ShipmentDetailsBody #PickupCartageAdvisedRow,
+.ShipmentDetailsBody #PickupRequiredByRow,
+.ShipmentDetailsBody #EstimatedPickupRow,
+.ShipmentDetailsBody #GoodsDeliveredRow,
+.ShipmentDetailsBody #CartageAdvisedRow,
+.ShipmentDetailsBody #DeliveryRequiredByRow,
+.ShipmentDetailsBody #EstimatedDeliveryRow,
+.ShipmentDetailsBody #StorageCommencesRow,
+.ShipmentDetailsBody #AvailabilityRow,
+.ShipmentDetailsBody #AvailableAtRow,
+.ShipmentDetailsBody #Milestones_MilestonesPanel,
+.ShipmentDetailsBody #TransportGridController,
+.ShipmentDetailsBody #PackLinesGridController,
+.ShipmentDetailsBody #OrdersGridController,
+
+.ShipmentDetailsBody #ChargesGridController,
+.ShipmentDetailsBody #DeliveryPanel {
+    display: none;
+}
+
+.ShipmentDetailsBody .DetailsHeader {
+    color: var(--color-white--);
+}
+
+.ShipmentDetailsBody .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+.ShipmentDetailsBody #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    /* width: 94%; */
+}
+
+.ShipmentDetailsBody #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ShipmentDetailsBody .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+.ShipmentDetailsBody #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+.ShipmentDetailsBody #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* --Filter by Workflow Custom Fields-- */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(11)>option:first-child,
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(11)>option:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(11)>option:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(11)>option:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(11)>option:nth-child(6),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(11)>option:nth-child(7),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(11)>option:nth-child(8),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(11)>option:nth-child(9),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(11)>option:nth-child(10),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(11)>option:nth-child(11),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(11)>option:nth-child(12),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(11)>option:nth-child(13),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(11)>option:nth-child(14),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(11)>option:nth-child(15) {
+    display: none;
+}
+
+/* --Filter by Workflow Custom Fields-- */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(11)>option:first-child,
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(11)>option:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(11)>option:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(11)>option:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(11)>option:nth-child(6),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(11)>option:nth-child(7),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(11)>option:nth-child(8),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(11)>option:nth-child(9),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(11)>option:nth-child(10),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(11)>option:nth-child(11),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(11)>option:nth-child(12),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(11)>option:nth-child(13),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(11)>option:nth-child(14),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(11)>option:nth-child(15) {
+    display: none;
+}
+
+/* --Filter by Workflow Custom Fields-- */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(11)>option:first-child,
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(11)>option:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(11)>option:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(11)>option:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(11)>option:nth-child(6),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(11)>option:nth-child(7),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(11)>option:nth-child(8),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(11)>option:nth-child(9),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(11)>option:nth-child(10),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(11)>option:nth-child(11),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(11)>option:nth-child(12),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(11)>option:nth-child(13),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(11)>option:nth-child(14),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(11)>option:nth-child(15) {
+    display: none;
+}
+
+/* --Filter by Workflow Custom Fields-- */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(11)>option:first-child,
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(11)>option:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(11)>option:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(11)>option:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(11)>option:nth-child(6),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(11)>option:nth-child(7),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(11)>option:nth-child(8),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(11)>option:nth-child(9),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(11)>option:nth-child(10),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(11)>option:nth-child(11),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(11)>option:nth-child(12),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(11)>option:nth-child(13),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(11)>option:nth-child(14),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(11)>option:nth-child(15) {
+    display: none;
+}
+
+/* --Filter by Workflow Custom Fields-- */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(11)>option:first-child,
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(11)>option:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(11)>option:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(11)>option:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(11)>option:nth-child(6),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(11)>option:nth-child(7),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(11)>option:nth-child(8),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(11)>option:nth-child(9),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(11)>option:nth-child(10),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(11)>option:nth-child(11),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(11)>option:nth-child(12),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(11)>option:nth-child(13),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(11)>option:nth-child(14),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(11)>option:nth-child(15) {
+    display: none;
+}
+
+/* -------------------------------- */
+/* --Filter by Numbers and References-- */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:first-child,
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(3),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(6),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(7),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(9),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(10),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(11),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(13),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(14),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(15),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(16),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(17),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(18),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(20),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(21),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(22),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(23),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(24),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(25),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(26),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:first-child>option:nth-child(27) {
+    display: none;
+}
+
+/* --Filter by Numbers and References-- */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:first-child,
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(3),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(6),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(7),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(9),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(10),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(11),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(13),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(14),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(15),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(16),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(17),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(18),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(20),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(21),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(22),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(23),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(24),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(25),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(26),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:first-child>option:nth-child(27) {
+    display: none;
+}
+
+/* --Filter by Numbers and References-- */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:first-child,
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(3),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(6),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(7),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(9),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(10),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(11),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(13),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(14),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(15),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(16),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(17),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(18),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(20),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(21),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(22),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(23),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(24),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(25),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(26),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:first-child>option:nth-child(27) {
+    display: none;
+}
+
+/* --Filter by Numbers and References-- */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:first-child,
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(3),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(6),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(7),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(9),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(10),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(11),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(13),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(14),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(15),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(16),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(17),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(18),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(20),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(21),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(22),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(23),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(24),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(25),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(26),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:first-child>option:nth-child(27) {
+    display: none;
+}
+
+/* --Filter by Numbers and References-- */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:first-child,
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(3),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(6),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(7),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(9),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(10),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(11),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(13),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(14),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(15),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(16),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(17),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(18),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(20),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(21),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(22),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(23),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(24),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(25),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(26),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:first-child>option:nth-child(27) {
+    display: none;
+}
+
+/* -------------------------------- */
+/*--Filter by Status and Flags & Filter by Organizations / Staff & Filter by Modes and Types & Filter by Text Search & Filter by Audit Information & Filter by Other & Filter by Amount Filters & Filter by Workflow Milestones & Filter by Workflow Milestones (Related) */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(6),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(7),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(8),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(9),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(10),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(12),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(13) {
+    display: none;
+}
+
+/*--Filter by Status and Flags & Filter by Organizations / Staff & Filter by Modes and Types & Filter by Text Search & Filter by Audit Information & Filter by Other & Filter by Amount Filters & Filter by Workflow Milestones & Filter by Workflow Milestones (Related) */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(6),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(7),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(8),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(9),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(10),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(12),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(13) {
+    display: none;
+}
+
+/*--Filter by Status and Flags & Filter by Organizations / Staff & Filter by Modes and Types & Filter by Text Search & Filter by Audit Information & Filter by Other & Filter by Amount Filters & Filter by Workflow Milestones & Filter by Workflow Milestones (Related) */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(6),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(7),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(8),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(9),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(10),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(12),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(13) {
+    display: none;
+}
+
+/*--Filter by Status and Flags & Filter by Organizations / Staff & Filter by Modes and Types & Filter by Text Search & Filter by Audit Information & Filter by Other & Filter by Amount Filters & Filter by Workflow Milestones & Filter by Workflow Milestones (Related) */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(6),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(7),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(8),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(9),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(10),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(12),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(13) {
+    display: none;
+}
+
+/*--Filter by Status and Flags & Filter by Organizations / Staff & Filter by Modes and Types & Filter by Text Search & Filter by Audit Information & Filter by Other & Filter by Amount Filters & Filter by Workflow Milestones & Filter by Workflow Milestones (Related) */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(6),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(7),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(8),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(9),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(10),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(12),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(13) {
+    display: none;
+}
+
+/* -------------------------------- */
+/* --Filter by Dates-- */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(3)>option:first-child,
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(3)>option:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(3)>option:nth-child(3),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(3)>option:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(3)>option:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(3)>option:nth-child(6),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(3)>option:nth-child(9),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(3)>option:nth-child(10),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(3)>option:nth-child(11),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(3)>option:nth-child(12),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(3)>option:nth-child(13),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(3)>option:nth-child(14),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(3)>option:nth-child(15),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(3)>option:nth-child(16),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(3)>option:nth-child(17),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(3)>option:nth-child(18),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(3)>option:nth-child(19) {
+    display: none;
+}
+
+/* --Filter by Dates-- */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(3)>option:first-child,
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(3)>option:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(3)>option:nth-child(3),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(3)>option:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(3)>option:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(3)>option:nth-child(6),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(3)>option:nth-child(9),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(3)>option:nth-child(10),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(3)>option:nth-child(11),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(3)>option:nth-child(12),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(3)>option:nth-child(13),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(3)>option:nth-child(14),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(3)>option:nth-child(15),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(3)>option:nth-child(16),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(3)>option:nth-child(17),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(3)>option:nth-child(18),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(2) td:first-child>select>optgroup:nth-child(3)>option:nth-child(19) {
+    display: none;
+}
+
+/* --Filter by Dates-- */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(3)>option:first-child,
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(3)>option:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(3)>option:nth-child(3),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(3)>option:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(3)>option:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(3)>option:nth-child(6),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(3)>option:nth-child(9),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(3)>option:nth-child(10),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(3)>option:nth-child(11),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(3)>option:nth-child(12),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(3)>option:nth-child(13),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(3)>option:nth-child(14),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(3)>option:nth-child(15),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(3)>option:nth-child(16),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(3)>option:nth-child(17),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(3)>option:nth-child(18),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(3) td:first-child>select>optgroup:nth-child(3)>option:nth-child(19) {
+    display: none;
+}
+
+/* --Filter by Dates-- */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(3)>option:first-child,
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(3)>option:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(3)>option:nth-child(3),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(3)>option:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(3)>option:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(3)>option:nth-child(6),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(3)>option:nth-child(9),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(3)>option:nth-child(10),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(3)>option:nth-child(11),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(3)>option:nth-child(12),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(3)>option:nth-child(13),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(3)>option:nth-child(14),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(3)>option:nth-child(15),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(3)>option:nth-child(16),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(3)>option:nth-child(17),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(3)>option:nth-child(18),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(4) td:first-child>select>optgroup:nth-child(3)>option:nth-child(19) {
+    display: none;
+}
+
+/* --Filter by Dates-- */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(3)>option:first-child,
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(3)>option:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(3)>option:nth-child(3),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(3)>option:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(3)>option:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(3)>option:nth-child(6),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(3)>option:nth-child(9),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(3)>option:nth-child(10),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(3)>option:nth-child(11),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(3)>option:nth-child(12),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(3)>option:nth-child(13),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(3)>option:nth-child(14),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(3)>option:nth-child(15),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(3)>option:nth-child(16),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(3)>option:nth-child(17),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(3)>option:nth-child(18),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:nth-child(5) td:first-child>select>optgroup:nth-child(3)>option:nth-child(19) {
+    display: none;
+}
+
+/* -------------------------------- */
+/* --Filter by Locations-- */
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(4)>option:first-child,
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(4)>option:nth-child(2),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(4)>option:nth-child(4),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(4)>option:nth-child(5),
+.ShipmentsBody #ctl07_ctl01_Table tbody tr:first-child td:first-child>select>optgroup:nth-child(4)>option:nth-child(6) {
+    display: none;
+}
+
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* -------------------------- */
+/* --copy shipment-- */
+.EditBookingBody #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.EditBookingBody #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+.EditBookingBody #PackLinesGrid tbody .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+.EditBookingBody #ReferenceGrid tbody .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+.EditBookingBody #up .ContentSection #MakeBooking {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    border: none;
+    padding: 0.3rem;
+}
+
+.EditBookingBody #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+/* Booking */
+form#Form1[action="./Bookings.aspx"] #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form#Form1[action="./Bookings.aspx"] .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+    background: none;
+}
+
+form#Form1[action="./Bookings.aspx"] #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    width: 94%;
+}
+
+form#Form1[action="./Bookings.aspx"] #OuterContentPane .FilterStripControl .Button {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--) !important;
+    border-radius: 0.2rem;
+}
+
+form#Form1[action="./Bookings.aspx"] #OuterContentPane .FilterStripControl tr td select {
+    border-radius: 0.2rem;
+    padding: 0.24rem;
+    color: var(--color-gray1);
+    margin-bottom: 1rem;
+}
+
+form#Form1[action="./Bookings.aspx"] #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+form#Form1[action="./Bookings.aspx"] #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+form#Form1[action="./Bookings.aspx"] #OuterContentPane .FilterStripControl {
+    width: 100%;
+    border-spacing: 1px;
+}
+
+form#Form1[action^="./Bookings.aspx"] .DetailsHeader {
+    font-weight: 100;
+}
+
+form#Form1[action^="./Bookings.aspx"] .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+form#Form1[action^="./Bookings.aspx"] .DetailsHeader a {
+    color: var(--color-white--);
+    text-decoration: none;
+}
+
+form#Form1[action^="./Bookings.aspx"] #ctl07_SearchResultsDataGridController_Header input {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--);
+    /* border: 1.5px solid var(--color-yellow--); */
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+}
+
+/* --Make-Booking -- */
+form#Form1[action="./EditBooking.aspx"] #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form#Form1[action="./EditBooking.aspx"] .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+form#Form1[action="./EditBooking.aspx"] #AuthorisedContent {
+    margin-top: 1rem;
+}
+
+form#Form1[action="./EditBooking.aspx"] #EditControls>.ResultsTable tbody tr:first-child td:first-child {
+    display: flex;
+    align-items: center;
+}
+
+form#Form1[action="./EditBooking.aspx"] #ReferenceGrid tbody .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+form#Form1[action="./EditBooking.aspx"] #up .ContentSection #MakeBooking {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    border: none;
+    padding: 0.3rem;
+}
+
+form#Form1[action="./EditBooking.aspx"] #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+form#Form1[action="./EditBooking.aspx"] #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+/* --order-- */
+form#Form1[action="./Orders.aspx"] #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form#Form1[action="./Orders.aspx"] .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+form#Form1[action="./Orders.aspx"] #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    width: 94%;
+}
+
+form#Form1[action="./Orders.aspx"] #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+form#Form1[action="./Orders.aspx"] #OuterContentPane .FilterStripControl .Button {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--) !important;
+    border-radius: 0.2rem;
+}
+
+form#Form1[action="./Orders.aspx"] #OuterContentPane .FilterStripControl tr td select {
+    border-radius: 0.2rem;
+    padding: 0.24rem;
+    color: var(--color-gray1);
+    margin-bottom: 1rem;
+}
+
+form#Form1[action="./Orders.aspx"] #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+form#Form1[action="./Orders.aspx"] #OuterContentPane .FilterStripControl {
+    width: 100%;
+    border-spacing: 1px;
+}
+
+form#Form1[action^="./Orders.aspx"] .DetailsHeader {
+    font-weight: 100;
+}
+
+form#Form1[action^="./Orders.aspx"] .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+form#Form1[action^="./Orders.aspx"] .DetailsHeader a {
+    color: var(--color-white--);
+    text-decoration: none;
+}
+
+form#Form1[action^="./Orders.aspx"] #ctl07_SearchResultsDataGridController_Header input {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    /* border: 1.5px solid var(--color-yellow--); */
+    color: var(--color-white--);
+    padding: 0.3rem;
+}
+
+form#Form1[action^="./Orders.aspx"] #TimeLineLegendHolder span {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    border: none;
+}
+
+.OrderDetailsBody #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.OrderDetailsBody .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+.OrderDetailsBody #EditButtonDiv {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.OrderDetailsBody #EditButtonDiv #EditOrder,
+.OrderDetailsBody #EditButtonDiv #CancelOrder,
+.OrderDetailsBody #EditButtonDiv #DuplicateOrder {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--) !important;
+    padding: 0.3rem 0.2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.2rem;
+}
+
+.OrderDetailsBody #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    /* width: 94%; */
+}
+
+.OrderDetailsBody #AdditionalTermsRow,
+.OrderDetailsBody #DeliveryRequiredByRow,
+.OrderDetailsBody #ExWorksRequiredByRow,
+.OrderDetailsBody #OrderDateRow {
+    display: none;
+}
+
+.OrderDetailsBody .DetailsHeader {
+    color: var(--color-white--);
+}
+
+.OrderDetailsBody .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+.OrderDetailsBody #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+.OrderDetailsBody #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+/* ----edit order */
+
+.EditOrderBody #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.EditOrderBody #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+.EditOrderBody #OrderLinesGrid tbody .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+.EditOrderBody #up .ContentSection #MakeBooking {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    border: none;
+    padding: 0.3rem;
+}
+
+.EditOrderBody #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+.EditOrderBody #SaveOrder,
+.EditOrderBody #CancelOrder {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    border: none;
+    padding: 0.3rem;
+}
+
+/* --Place-Order-- */
+form#Form1[action="./EditOrder.aspx"] #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form#Form1[action="./EditOrder.aspx"] form#Form1[action="./EditOrder.aspx"] .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+form#Form1[action="./EditOrder.aspx"] #AuthorisedContent {
+    margin-top: 1rem;
+}
+
+form#Form1[action="./EditOrder.aspx"] #SaveOrder,
+form#Form1[action="./EditOrder.aspx"] #CancelOrder {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    border: none;
+    padding: 0.3rem;
+}
+
+form#Form1[action="./EditOrder.aspx"] #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+form#Form1[action="./EditOrder.aspx"] #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+.OrdersBody #SwitchHyperLink {
+    display: none;
+}
+
+/* conatiner */
+form#Form1[action="./Containers.aspx"] #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form#Form1[action="./Containers.aspx"] .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+form#Form1[action="./Containers.aspx"] #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    width: 94%;
+}
+
+form#Form1[action="./Containers.aspx"] #OuterContentPane .FilterStripControl .Button {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--) !important;
+    border-radius: 0.2rem;
+}
+
+form#Form1[action="./Containers.aspx"] #OuterContentPane .FilterStripControl tr td select {
+    border-radius: 0.2rem;
+    padding: 0.24rem;
+    color: var(--color-gray1);
+    margin-bottom: 1rem;
+}
+
+form#Form1[action="./Containers.aspx"] #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+form#Form1[action="./Containers.aspx"] #OuterContentPane .FilterStripControl {
+    width: 100%;
+    border-spacing: 1px;
+}
+
+form#Form1[action^="./Containers.aspx"] .DetailsHeader {
+    font-weight: 100;
+}
+
+form#Form1[action^="./Containers.aspx"] .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+form#Form1[action^="./Containers.aspx"] .DetailsHeader a {
+    color: var(--color-white--);
+    text-decoration: none;
+}
+
+form#Form1[action^="./Containers.aspx"] #ctl07_SearchResultsDataGridController_Header input {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    /* border: 1.5px solid var(--color-yellow--); */
+    color: var(--color-white--);
+    padding: 0.3rem;
+}
+
+form#Form1[action^="./Containers.aspx"] #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+.ContainerDetailsBody #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ContainerDetailsBody .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+.ContainerDetailsBody #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    /* width: 94%; */
+}
+
+.ContainerDetailsBody #EditButtonDiv {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ContainerDetailsBody #EditButtonDiv #EditContainer {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--) !important;
+    padding: 0.3rem 0.2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.2rem;
+}
+
+.ContainerDetailsBody #MasterBillRow,
+.ContainerDetailsBody #ContainerStatusRow,
+.ContainerDetailsBody #TransportBookedRow,
+.ContainerDetailsBody #VerifiedByEmailRow,
+.ContainerDetailsBody #VerifiedByPersonRow,
+.ContainerDetailsBody #VerifiedMethodRow,
+.ContainerDetailsBody #VerifiedWeightRow,
+.ContainerDetailsBody #VGMSpecificationRow {
+    display: none;
+}
+
+.ContainerDetailsBody #ConsolNumberRow td:first-child,
+.ContainerDetailsBody #ConsolNumberRow td:nth-child(2),
+.ContainerDetailsBody #ConsolNumberRow td:nth-child(3),
+.ContainerDetailsBody #PickupRow td:first-child,
+.ContainerDetailsBody #PickupRow td:nth-child(2),
+.ContainerDetailsBody #PickupRow td:nth-child(3),
+.ContainerDetailsBody #TypeRow td:nth-child(4),
+.ContainerDetailsBody #TypeRow td:nth-child(5),
+.ContainerDetailsBody #Packagesow td:nth-child(4),
+.ContainerDetailsBody #Packagesow td:nth-child(5),
+.ContainerDetailsBody #ModeRow td:nth-child(4),
+.ContainerDetailsBody #ModeRow td:nth-child(5),
+.ContainerDetailsBody #RequiredDeliveryRow td:nth-child(4),
+.ContainerDetailsBody #RequiredDeliveryRow td:nth-child(5),
+.ContainerDetailsBody #ActualDeliveryRow td:nth-child(4),
+.ContainerDetailsBody #ActualDeliveryRow td:nth-child(5) {
+    display: none;
+}
+
+.ContainerDetailsBody .DetailsHeader {
+    color: var(--color-white--);
+}
+
+.ContainerDetailsBody .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+.ContainerDetailsBody #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+.ContainerDetailsBody #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+/* ----EditContainer---- */
+
+.EditContainerBody #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.EditContainerBody #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+.EditContainerBody #OrdersPanel_OrdersGrid tbody .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+.EditContainerBody #DocumentsPanel_DocumentsGrid tbody .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+.EditContainerBody #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+.EditContainerBody #SaveContainer {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    border: none;
+    padding: 0.3rem;
+}
+
+/* --View-Summary-container-- */
+.ContainerSummaryBody #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ContainerSummaryBody .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+.ContainerSummaryBody #SelectedContainersGrid tbody .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+.ContainerSummaryBody #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+.ContainerSummaryBody #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+/* --Spotes-quotes */
+.QuotationsBody #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.QuotationsBody .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+.QuotationsBody #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    width: 94%;
+}
+
+.QuotationsBody #OuterContentPane .FilterStripControl .Button {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--) !important;
+    border-radius: 0.2rem;
+}
+
+.QuotationsBody #OuterContentPane .FilterStripControl tr td select {
+    border-radius: 0.2rem;
+    padding: 0.24rem;
+    color: var(--color-gray1);
+    margin-bottom: 1rem;
+}
+
+.QuotationsBody #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+.QuotationsBody #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+.QuotationsBody #OuterContentPane .FilterStripControl {
+    width: 100%;
+    border-spacing: 1px;
+}
+
+.QuotationsBody #ctl07_SearchResultsDataGridController_Header input {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    /* border: 1.5px solid var(--color-yellow--); */
+    color: var(--color-white--);
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+}
+
+.QuotationsBody .DetailsHeader {
+    font-weight: 100;
+}
+
+.QuotationsBody .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+.QuotationsBody .DetailsHeader a {
+    color: var(--color-white--);
+    text-decoration: none;
+}
+
+/* --Spote--new-quotation-- */
+.QuotationBody #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.QuotationBody .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+.QuotationBody #PreviewAndSave #PreviewQuote,
+.QuotationBody #PreviewAndSave #SaveQuote {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.3rem;
+    border: none;
+}
+
+.QuotationBody #PendingDownload {
+    display: none;
+}
+
+/* --Reports-- */
+form#Form1[action^="./Reports.aspx?ContentType=Freight"] #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form#Form1[action^="./Reports.aspx?ContentType=Freight"] .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+form#Form1[action^="./Reports.aspx?ContentType=Freight"] #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    width: 94%;
+}
+
+form#Form1[action^="./Reports.aspx?ContentType=Freight"] #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+form#Form1[action^="./Reports.aspx?ContentType=Freight"] #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+/* --Flight Schedules-- */
+form#Form1[action^="./FlightSchedules.aspx"] #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form#Form1[action^="./FlightSchedules.aspx"] .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+form#Form1[action^="./FlightSchedules.aspx"] #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    width: 94%;
+}
+
+form#Form1[action^="./FlightSchedules.aspx"] #OuterContentPane .FilterStripControl .Button {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--) !important;
+    border-radius: 0.2rem;
+}
+
+form#Form1[action^="./FlightSchedules.aspx"] #OuterContentPane .FilterStripControl tr td select {
+    border-radius: 0.2rem;
+    padding: 0.24rem;
+    color: var(--color-gray1);
+    margin-bottom: 1rem;
+}
+
+form#Form1[action^="./FlightSchedules.aspx"] #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+form#Form1[action^="./FlightSchedules.aspx"] #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+form#Form1[action^="./FlightSchedules.aspx"] #OuterContentPane .FilterStripControl {
+    width: 100%;
+    border-spacing: 1px;
+}
+
+form#Form1[action^="./FlightSchedules.aspx"] .DetailsHeader {
+    font-weight: 100;
+}
+
+form#Form1[action^="./FlightSchedules.aspx"] .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+form#Form1[action^="./FlightSchedules.aspx"] .DetailsHeader a {
+    color: var(--color-white--);
+    text-decoration: none;
+}
+
+/* --Sailing Schedules-- */
+form#Form1[action^="./SailingSchedules.aspx"] #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form#Form1[action^="./SailingSchedules.aspx"] .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+form#Form1[action^="./SailingSchedules.aspx"] #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    width: 94%;
+}
+
+form#Form1[action^="./SailingSchedules.aspx"] #OuterContentPane .FilterStripControl .Button {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--) !important;
+    border-radius: 0.2rem;
+}
+
+form#Form1[action^="./SailingSchedules.aspx"] #OuterContentPane .FilterStripControl tr td select {
+    border-radius: 0.2rem;
+    padding: 0.24rem;
+    color: var(--color-gray1);
+    margin-bottom: 1rem;
+}
+
+form#Form1[action^="./SailingSchedules.aspx"] #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+form#Form1[action^="./SailingSchedules.aspx"] #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+form#Form1[action^="./SailingSchedules.aspx"] #OuterContentPane .FilterStripControl {
+    width: 100%;
+    border-spacing: 1px;
+}
+
+form#Form1[action^="./SailingSchedules.aspx"] .DetailsHeader {
+    font-weight: 100;
+}
+
+form#Form1[action^="./SailingSchedules.aspx"] .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+form#Form1[action^="./SailingSchedules.aspx"] .DetailsHeader a {
+    color: var(--color-white--);
+    text-decoration: none;
+}
+
+/*--Road Schedules--*/
+form#Form1[action^="./RoadSchedules.aspx"] #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form#Form1[action^="./RoadSchedules.aspx"] .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+form#Form1[action^="./RoadSchedules.aspx"] #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    width: 94%;
+}
+
+form#Form1[action^="./RoadSchedules.aspx"] #OuterContentPane .FilterStripControl .Button {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--) !important;
+    border-radius: 0.2rem;
+}
+
+form#Form1[action^="./RoadSchedules.aspx"] #OuterContentPane .FilterStripControl tr td select {
+    border-radius: 0.2rem;
+    padding: 0.24rem;
+    color: var(--color-gray1);
+    margin-bottom: 1rem;
+}
+
+form#Form1[action^="./RoadSchedules.aspx"] #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+form#Form1[action^="./RoadSchedules.aspx"] #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+form#Form1[action^="./RoadSchedules.aspx"] #OuterContentPane .FilterStripControl {
+    width: 100%;
+    border-spacing: 1px;
+}
+
+form#Form1[action^="./RoadSchedules.aspx"] .DetailsHeader {
+    font-weight: 100;
+}
+
+form#Form1[action^="./RoadSchedules.aspx"] .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+form#Form1[action^="./RoadSchedules.aspx"] .DetailsHeader a {
+    color: var(--color-white--);
+    text-decoration: none;
+}
+
+/* --Rail Schedules-- */
+form#Form1[action^="./RailSchedules.aspx"] #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form#Form1[action^="./RailSchedules.aspx"] .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+form#Form1[action^="./RailSchedules.aspx"] #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    width: 94%;
+}
+
+form#Form1[action^="./RailSchedules.aspx"] #OuterContentPane .FilterStripControl .Button {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--) !important;
+    border-radius: 0.2rem;
+}
+
+form#Form1[action^="./RailSchedules.aspx"] #OuterContentPane .FilterStripControl tr td select {
+    border-radius: 0.2rem;
+    padding: 0.24rem;
+    color: var(--color-gray1);
+    margin-bottom: 1rem;
+}
+
+form#Form1[action^="./RailSchedules.aspx"] #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+form#Form1[action^="./RailSchedules.aspx"] #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+form#Form1[action^="./RailSchedules.aspx"] #OuterContentPane .FilterStripControl {
+    width: 100%;
+    border-spacing: 1px;
+}
+
+form#Form1[action^="./RailSchedules.aspx"] .DetailsHeader {
+    font-weight: 100;
+}
+
+form#Form1[action^="./RailSchedules.aspx"] .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+form#Form1[action^="./RailSchedules.aspx"] .DetailsHeader a {
+    color: var(--color-white--);
+    text-decoration: none;
+}
+
+/* --Liner & Agency Bookings-- */
+.LinerAndAgencyBookingsBody #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.LinerAndAgencyBookingsBody .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+.LinerAndAgencyBookingsBody #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    width: 94%;
+}
+
+.LinerAndAgencyBookingsBody #OuterContentPane .FilterStripControl .Button {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--) !important;
+    border-radius: 0.2rem;
+}
+
+.LinerAndAgencyBookingsBody #OuterContentPane .FilterStripControl tr td select {
+    border-radius: 0.2rem;
+    padding: 0.24rem;
+    color: var(--color-gray1);
+    margin-bottom: 1rem;
+}
+
+.LinerAndAgencyBookingsBody #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+.LinerAndAgencyBookingsBody #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+.LinerAndAgencyBookingsBody #OuterContentPane .FilterStripControl {
+    width: 100%;
+    border-spacing: 1px;
+}
+
+.LinerAndAgencyBookingsBody #ctl07_SearchResultsDataGridController_Header input {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--);
+    padding: 0.3rem;
+}
+
+.LinerAndAgencyBookingsBody .DetailsHeader {
+    font-weight: 100;
+}
+
+.LinerAndAgencyBookingsBody .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+.LinerAndAgencyBookingsBody .DetailsHeader a {
+    color: var(--color-white--);
+    text-decoration: none;
+}
+
+/* --Liner & Agency make--Booking-- */
+
+.EditLinerAndAgencyBookingBody #SaveButton {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--);
+    padding: 0.3rem;
+}
+
+.EditLinerAndAgencyBookingBody #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+.EditLinerAndAgencyBookingBody #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+/* --Liner & Agency Bills Of Lading & Forwarding Instructions-- */
+form#Form1[action^="./BillsOfLading.aspx"] #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form#Form1[action^="./BillsOfLading.aspx"] .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+form#Form1[action^="./BillsOfLading.aspx"] #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    width: 94%;
+}
+
+form#Form1[action^="./BillsOfLading.aspx"] #OuterContentPane .FilterStripControl .Button {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--) !important;
+    border-radius: 0.2rem;
+}
+
+form#Form1[action^="./BillsOfLading.aspx"] #OuterContentPane .FilterStripControl tr td select {
+    border-radius: 0.2rem;
+    padding: 0.24rem;
+    color: var(--color-gray1);
+    margin-bottom: 1rem;
+}
+
+form#Form1[action^="./BillsOfLading.aspx"] #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+form#Form1[action^="./BillsOfLading.aspx"] #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+form#Form1[action^="./BillsOfLading.aspx"] #OuterContentPane .FilterStripControl {
+    width: 100%;
+    border-spacing: 1px;
+}
+
+form#Form1[action^="./BillsOfLading.aspx"] .DetailsHeader {
+    font-weight: 100;
+}
+
+form#Form1[action^="./BillsOfLading.aspx"] .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+form#Form1[action^="./BillsOfLading.aspx"] .DetailsHeader a {
+    color: var(--color-white--);
+    text-decoration: none;
+}
+
+/* --Linear &Agency in Containers-- */
+form#Form1[action^="./LinerAndAgencyContainers.aspx"] #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form#Form1[action^="./LinerAndAgencyContainers.aspx"] .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+form#Form1[action^="./LinerAndAgencyContainers.aspx"] #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    width: 94%;
+}
+
+form#Form1[action^="./LinerAndAgencyContainers.aspx"] #OuterContentPane .FilterStripControl .Button {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--) !important;
+    border-radius: 0.2rem;
+}
+
+form#Form1[action^="./LinerAndAgencyContainers.aspx"] #OuterContentPane .FilterStripControl tr td select {
+    border-radius: 0.2rem;
+    padding: 0.24rem;
+    color: var(--color-gray1);
+    margin-bottom: 1rem;
+}
+
+form#Form1[action^="./LinerAndAgencyContainers.aspx"] #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+form#Form1[action^="./LinerAndAgencyContainers.aspx"] #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+form#Form1[action^="./LinerAndAgencyContainers.aspx"] #OuterContentPane .FilterStripControl {
+    width: 100%;
+    border-spacing: 1px;
+}
+
+form#Form1[action^="./LinerAndAgencyContainers.aspx"] #OuterContentPane #ctl07_ctl01_Table .aspNetDisabled {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--) !important;
+    border-radius: 0.2rem;
+}
+
+form#Form1[action^="./LinerAndAgencyContainers.aspx"] .DetailsHeader {
+    font-weight: 100;
+}
+
+form#Form1[action^="./LinerAndAgencyContainers.aspx"] .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+form#Form1[action^="./LinerAndAgencyContainers.aspx"] .DetailsHeader a {
+    color: var(--color-white--);
+    text-decoration: none;
+}
+
+/* --Liner & Agency Reports-- */
+form#Form1[action^="./Reports.aspx?ContentType=LinerAgency"] #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form#Form1[action^="./Reports.aspx?ContentType=LinerAgency"] .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+form#Form1[action^="./Reports.aspx?ContentType=LinerAgency"] #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    width: 94%;
+}
+
+/* --Customs Reports-- */
+form#Form1[action^="./Reports.aspx?ContentType=Customs"] #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form#Form1[action^="./Reports.aspx?ContentType=Customs"] .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+form#Form1[action^="./Reports.aspx?ContentType=Customs"] #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    width: 94%;
+}
+
+form#Form1[action^="./Reports.aspx?ContentType=Customs"] #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+form#Form1[action^="./Reports.aspx?ContentType=Customs"] #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+/* --Transport Jobs-- */
+form#Form1[action^="./Cartages.aspx"] #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form#Form1[action^="./Cartages.aspx"] .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+form#Form1[action^="./Cartages.aspx"] #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    width: 94%;
+}
+
+form#Form1[action^="./Cartages.aspx"] #OuterContentPane .FilterStripControl .Button {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--) !important;
+    border-radius: 0.2rem;
+}
+
+form#Form1[action^="./Cartages.aspx"] #OuterContentPane .FilterStripControl tr td select {
+    border-radius: 0.2rem;
+    padding: 0.24rem;
+    color: var(--color-gray1);
+    margin-bottom: 1rem;
+}
+
+form#Form1[action^="./Cartages.aspx"] #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+form#Form1[action^="./Cartages.aspx"] #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+form#Form1[action^="./Cartages.aspx"] #OuterContentPane .FilterStripControl {
+    width: 100%;
+    border-spacing: 1px;
+}
+
+form#Form1[action^="./Cartages.aspx"] .DetailsHeader {
+    font-weight: 100;
+}
+
+form#Form1[action^="./Cartages.aspx"] .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+form#Form1[action^="./Cartages.aspx"] .DetailsHeader a {
+    color: var(--color-white--);
+    text-decoration: none;
+}
+
+/* --Transport Reports-- */
+form#Form1[action^="./Reports.aspx?ContentType=Transport"] #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form#Form1[action^="./Reports.aspx?ContentType=Transport"] .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+form#Form1[action^="./Reports.aspx?ContentType=Transport"] #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+form#Form1[action^="./Reports.aspx?ContentType=Transport"] #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+form#Form1[action^="./Reports.aspx?ContentType=Transport"] #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    width: 94%;
+}
+
+/* --Statement of Account-- */
+form#Form1[action^="./Transactions.aspx"] #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form#Form1[action^="./Transactions.aspx"] .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+form#Form1[action^="./Transactions.aspx"] #OuterContentPane #TitleDiv {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    width: 94%;
+}
+
+form#Form1[action^="./Transactions.aspx"] #SearchControlHolder .Button {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--) !important;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+}
+
+form#Form1[action^="./Transactions.aspx"] .DetailsHeader {
+    font-weight: 100;
+}
+
+form#Form1[action^="./Transactions.aspx"] .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+form#Form1[action^="./Transactions.aspx"] .DetailsHeader a {
+    color: var(--color-white--);
+    text-decoration: none;
+}
+
+form#Form1[action^="./Transactions.aspx"] #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+form#Form1[action^="./Transactions.aspx"] #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+/* --SwitchCompany-- */
+.SwitchCompanyBody #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.SwitchCompanyBody .DetailsHeader {
+    font-weight: 100;
+}
+
+.SwitchCompanyBody .DetailsHeader td {
+    background-color: var(--color-dkgreen--);
+    background-image: none;
+    color: var(--color-white--);
+}
+
+.SwitchCompanyBody #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+.SwitchCompanyBody #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+/* --Change Password-- */
+form#Form1[action^="./ChangePassword.aspx"] #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form#Form1[action^="./ChangePassword.aspx"] #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+form#Form1[action^="./ChangePassword.aspx"] #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+form#Form1[action^="./ChangePassword.aspx"] .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+form#Form1[action^="./ChangePassword.aspx"] #SetPasswordBox .button {
+    background-color: var(--color-dkgreen--);
+    border: none;
+    color: var(--color-white--) !important;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+}
+
+/* --user Reports-- */
+form#Form1[action^="./Reports.aspx?ContentType=All"] #pagehead {
+    width: 100%;
+    position: relative;
+    height: 45%;
+
+    box-sizing: border-box;
+    background: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form#Form1[action^="./Reports.aspx?ContentType=All"] .LogoImage img {
+    border: 0px;
+    border-style: none;
+    float: left;
+    height: 9rem;
+    width: 27rem;
+    background: none;
+}
+
+form#Form1[action^="./Reports.aspx?ContentType=All"] #OuterContentPane #Title {
+    background-color: var(--color-dkgreen--);
+    color: var(--color-white--);
+    padding: 0.4rem 0.4rem;
+    width: 94%;
+}
+
+form#Form1[action^="./Reports.aspx?ContentType=All"] #OuterContentPane {
+    width: 90%;
+    margin: 75px auto;
+    min-height: 571px;
+}
+
+form#Form1[action^="./Reports.aspx?ContentType=All"] #menu {
+    top: 50%;
+
+    left: 15%;
+}
+
+/* ------------ */
