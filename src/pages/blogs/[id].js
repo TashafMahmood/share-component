@@ -24,7 +24,7 @@ function BlogsDetails(props) {
             </Head>
             <div className='d-flex align-item-center justify-content-center'>
                 <iframe
-                    src='https://www.elred.io'
+                    src='https://dynamiclinks-9d64a.web.app/shareProfile?userCode=63a552336af986350ae41c63'
                     width={300}
                     height={600}
                     title='W3Schools Free Online Web Tutorials'></iframe>
