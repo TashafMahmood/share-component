@@ -6,8 +6,8 @@ function ShareCard(props) {
   const { data } = props;
   const { query } = useRouter();
 
-  const userCode = query.userCode ? query.userCode : query.companyUserCode;
-  const params = query.userCode ? "userCode" : "companyUserCode";
+  const userCode = query?.userCode ? query?.userCode : query?.companyUserCode;
+  const params = query?.userCode ? "userCode" : "companyUserCode";
   4;
 
   console.log("datayyyy", data);
@@ -46,8 +46,8 @@ function ShareCard(props) {
 export async function getServerSideProps({ res, query }) {
   // console.log(context.query);
   res.setHeader("Cache-Control", "no-store");
-  const userCode = query.userCode ? query.userCode : query.companyUserCode;
-  const params = query.userCode ? "userCode" : "companyUserCode";
+  const userCode = query?.userCode ? query?.userCode : query?.companyUserCode;
+  const params = query?.userCode ? "userCode" : "companyUserCode";
 
   const response = await fetch(
     `https://dev.elred.io/noSessionPreviewCardScreenshot?${params}=${userCode}`,
@@ -64,7 +64,7 @@ export async function getServerSideProps({ res, query }) {
 
   const data = await response.json();
   console.log("fetch image data", data);
-  const result = data.result && data.result.length && data.result[0];
+  const result = data?.result && data?.result?.length && data?.result[0];
 
   return {
     props: { data: result }, // will be passed to the page component as props
