@@ -14,16 +14,9 @@ function ShareCard(props) {
   return (
     <div>
       <Head>
-        <meta
-          property="og:title"
-          content={data?.title ?? "demo title"}
-          key="title"
-        />
+        <meta property="og:title" content={data?.title ?? ""} key="title" />
         <meta property="og:image" content={data.cardImageURL} key="image" />
-        <meta
-          property="og:description"
-          content={data?.summary ?? "demo summary"}
-        />
+        <meta property="og:description" content={data?.summary ?? ""} />
       </Head>
       <div className="d-flex align-item-center justify-content-center">
         <iframe
@@ -39,10 +32,11 @@ function ShareCard(props) {
 export async function getServerSideProps({ res, query }) {
   // console.log(context.query);
   res.setHeader("Cache-Control", "no-store");
-  const { userCode } = query;
+  const userCode = query.userCode ? query.userCode : query.companyUserCode;
+  const params = query.userCode ? "userCode" : "companyUserCode";
 
   const response = await fetch(
-    `https://dev.elred.io/noSessionPreviewCardScreenshot?userCode=${userCode}`,
+    `https://dev.elred.io/noSessionPreviewCardScreenshot?${params}=${userCode}`,
     {
       method: "POST",
       headers: {
