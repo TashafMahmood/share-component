@@ -32,7 +32,7 @@ function ShareCard(props) {
 export async function getServerSideProps({ res, query }) {
   // console.log(context.query);
   res.setHeader("Cache-Control", "no-store");
-  const { userCode } = query;
+  const userCode = query.userCode ? query.userCode : query.companyUserCode;
 
   const response = await fetch(
     `https://dev.elred.io/noSessionPreviewCardScreenshot?userCode=${userCode}`,
