@@ -7,6 +7,10 @@ function ShareCard(props) {
   const { query } = useRouter();
 
   const userCode = query.userCode ? query.userCode : query.companyUserCode;
+  const params = query.userCode ? "userCode" : "companyUserCode";
+  4;
+
+  console.log("datayyyy", data);
 
   if (!userCode) {
     return <div>invalid user code</div>;
@@ -14,13 +18,23 @@ function ShareCard(props) {
   return (
     <div>
       <Head>
-        <meta property="og:title" content={data?.title ?? ""} key="title" />
-        <meta property="og:image" content={data.cardImageURL} key="image" />
-        <meta property="og:description" content={data?.summary ?? ""} />
+        {/* <meta property="og:title" content={data?.title ?? ""} key="title" /> */}
+        <meta
+          property="og:image"
+          content="https://www.w3schools.com/images/w3schools_logo_436_2.png"
+        />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="400" />
+        <meta property="og:image:height" content="400"></meta>
+        {/* <meta property="og:image" content={data.cardImageURL} key="image" />
+        <meta property="og:image:width" content="300" />
+        <meta property="og:image:height" content="300" /> */}
+
+        {/* <meta property="og:description" content={data?.summary ?? ""} /> */}
       </Head>
       <div className="d-flex align-item-center justify-content-center">
         <iframe
-          src={`https://dynamiclinks-9d64a.web.app/shareProfile?userCode=${userCode}`}
+          src={`https://dynamiclinks-9d64a.web.app/shareProfile?${params}=${userCode}`}
           className="iframe-cont"
           title="W3Schools Free Online Web Tutorials"
         ></iframe>
@@ -33,9 +47,10 @@ export async function getServerSideProps({ res, query }) {
   // console.log(context.query);
   res.setHeader("Cache-Control", "no-store");
   const userCode = query.userCode ? query.userCode : query.companyUserCode;
+  const params = query.userCode ? "userCode" : "companyUserCode";
 
   const response = await fetch(
-    `https://dev.elred.io/noSessionPreviewCardScreenshot?userCode=${userCode}`,
+    `https://dev.elred.io/noSessionPreviewCardScreenshot?${params}=${userCode}`,
     {
       method: "POST",
       headers: {
