@@ -21,13 +21,14 @@ function ShareCard(props) {
         {/* <meta property="og:title" content={data?.title ?? ""} key="title" /> */}
         <meta
           property="og:image"
-          content={
-            "https://static.tvmaze.com/uploads/images/medium_portrait/191/478539.jpg"
-          }
-          key="image"
+          content="https://www.w3schools.com/images/w3schools_logo_436_2.png"
         />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="436" />
+        <meta property="og:image:height" content="228"></meta>
+        {/* <meta property="og:image" content={data.cardImageURL} key="image" />
         <meta property="og:image:width" content="300" />
-        <meta property="og:image:height" content="300" />
+        <meta property="og:image:height" content="300" /> */}
 
         {/* <meta property="og:description" content={data?.summary ?? ""} /> */}
       </Head>
