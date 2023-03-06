@@ -14,16 +14,9 @@ function ShareCard(props) {
   return (
     <div>
       <Head>
-        <meta
-          property="og:title"
-          content={data?.title ?? "demo title"}
-          key="title"
-        />
+        <meta property="og:title" content={data?.title ?? ""} key="title" />
         <meta property="og:image" content={data.cardImageURL} key="image" />
-        <meta
-          property="og:description"
-          content={data?.summary ?? "demo summary"}
-        />
+        <meta property="og:description" content={data?.summary ?? ""} />
       </Head>
       <div className="d-flex align-item-center justify-content-center">
         <iframe
