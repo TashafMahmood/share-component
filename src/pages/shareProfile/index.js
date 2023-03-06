@@ -8,6 +8,9 @@ function ShareCard(props) {
 
   const userCode = query.userCode ? query.userCode : query.companyUserCode;
   const params = query.userCode ? "userCode" : "companyUserCode";
+  4;
+
+  console.log("datayyyy", data);
 
   if (!userCode) {
     return <div>invalid user code</div>;
