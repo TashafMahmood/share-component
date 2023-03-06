@@ -19,7 +19,13 @@ function ShareCard(props) {
     <div>
       <Head>
         {/* <meta property="og:title" content={data?.title ?? ""} key="title" /> */}
-        <meta property="og:image" content={data.cardImageURL} key="image" />
+        <meta
+          property="og:image"
+          content={
+            "https://static.tvmaze.com/uploads/images/medium_portrait/191/478539.jpg"
+          }
+          key="image"
+        />
         <meta property="og:image:width" content="300" />
         <meta property="og:image:height" content="300" />
 
