@@ -7,6 +7,7 @@ function ShareCard(props) {
   const { query } = useRouter();
 
   const userCode = query.userCode ? query.userCode : query.companyUserCode;
+  const params = query.userCode ? "userCode" : "companyUserCode";
 
   if (!userCode) {
     return <div>invalid user code</div>;
@@ -20,7 +21,7 @@ function ShareCard(props) {
       </Head>
       <div className="d-flex align-item-center justify-content-center">
         <iframe
-          src={`https://dynamiclinks-9d64a.web.app/shareProfile?userCode=${userCode}`}
+          src={`https://dynamiclinks-9d64a.web.app/shareProfile?${params}=${userCode}`}
           className="iframe-cont"
           title="W3Schools Free Online Web Tutorials"
         ></iframe>
