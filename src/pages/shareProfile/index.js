@@ -10,7 +10,7 @@ function ShareProfile(props) {
   const params = query?.userCode ? "userCode" : "companyUserCode";
   4;
 
-  console.log("datayyyy", data);
+  // console.log("datayyyy", data);
 
   if (!userCode) {
     return <div>invalid user code</div>;
@@ -18,7 +18,9 @@ function ShareProfile(props) {
   return (
     <div>
       <Head>
-        <meta property="og:title" content={data?.title ?? ""} key="title" />
+        {/* <meta property="og:title" content={data?.title ?? ""} key="title" />
+         */}
+        <meta property="og:image" content={data.cardImageURL} key="image" />
         {/* <meta
           property="og:image"
           content="https://www.w3schools.com/images/w3schools_logo_436_2.png"
@@ -26,7 +28,7 @@ function ShareProfile(props) {
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="400" />
         <meta property="og:image:height" content="400"></meta>
-        {/* <meta property="og:image" content={data.cardImageURL} key="image" />
+        {/* 
         <meta property="og:image:width" content="300" />
         <meta property="og:image:height" content="300" /> */}
 
