@@ -20,7 +20,13 @@ function ShareProfile(props) {
       <Head>
         {/* <meta property="og:title" content={data?.title ?? ""} key="title" />
          */}
-        <meta property="og:image" content={data.cardImageURL} key="image" />
+        <meta
+          property="og:image"
+          content={
+            "https://elreddev.s3.amazonaws.com/screenshots/63a5932c6af986350ae423281678192450886.png"
+          }
+          key="image"
+        />
         {/* <meta
           property="og:image"
           content="https://www.w3schools.com/images/w3schools_logo_436_2.png"
