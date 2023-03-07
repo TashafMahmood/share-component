@@ -18,20 +18,10 @@ function ShareCard(props) {
   return (
     <div>
       <Head>
-        {/* <meta property="og:title" content={data?.title ?? ""} key="title" /> */}
-        {/* <meta
-          property="og:image"
-          content="https://www.w3schools.com/images/w3schools_logo_436_2.png"
-        /> */}
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="400" />
         <meta property="og:image:height" content="400" />
         <meta property="og:image" content={data.cardImageURL} key="image" />
-        {/* 
-        <meta property="og:image:width" content="300" />
-        <meta property="og:image:height" content="300" /> */}
-
-        {/* <meta property="og:description" content={data?.summary ?? ""} /> */}
       </Head>
       <div className="d-flex align-item-center justify-content-center">
         <iframe
@@ -45,7 +35,6 @@ function ShareCard(props) {
 }
 
 export async function getServerSideProps({ res, query }) {
-  // console.log(context.query);
   res.setHeader("Cache-Control", "no-store");
   const userCode = query?.userCode ? query?.userCode : query?.companyUserCode;
   const params = query?.userCode ? "userCode" : "companyUserCode";
