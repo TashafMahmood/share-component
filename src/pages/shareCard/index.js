@@ -27,11 +27,7 @@ function ShareCard(props) {
           key="image"
         />
         <meta property="og:title" content={data?.title ?? ""} key="title" />
-        <meta
-          property="og:description"
-          content="Sean Connery found fame and fortune as the
-           suave, sophisticated British agent, James Bond."
-        />
+        <meta property="og:description" content={data?.description ?? ""} />
       </Head>
       <div className="d-flex align-item-center justify-content-center">
         <iframe
