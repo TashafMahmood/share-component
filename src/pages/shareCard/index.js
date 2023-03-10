@@ -22,6 +22,12 @@ function ShareCard(props) {
         <meta property="og:image:width" content="400" />
         <meta property="og:image:height" content="400" />
         <meta property="og:image" content={data.cardImageURL} key="image" />
+        <meta property="og:title" content={data.title} key="title" />
+        <meta
+          property="og:decription"
+          content={data.decription}
+          key="decription"
+        />
       </Head>
       <div className="d-flex align-item-center justify-content-center">
         <iframe

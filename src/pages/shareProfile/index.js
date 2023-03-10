@@ -19,8 +19,12 @@ function ShareProfile(props) {
     <div>
       <Head>
         <meta property="og:image" content={data.cardImageURL} key="image" />
-        <meta property="og:title" content={data.userCode} key="title" />
-
+        <meta property="og:title" content={data.title} key="title" />
+        <meta
+          property="og:decription"
+          content={data.decription}
+          key="decription"
+        />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="400" />
         <meta property="og:image:height" content="400"></meta>
