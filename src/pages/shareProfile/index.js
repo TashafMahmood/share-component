@@ -22,9 +22,10 @@ function ShareProfile(props) {
         <meta property="og:title" content={data.title} key="title" />
         <meta
           property="og:description"
-          content={data.description}
-          key="description"
+          content="Sean Connery found fame and fortune as the
+           suave, sophisticated British agent, James Bond."
         />
+
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="400" />
         <meta property="og:image:height" content="400"></meta>
