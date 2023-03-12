@@ -16,24 +16,28 @@ function ShareProfile(props) {
     return <div>invalid user code</div>;
   }
   return (
-    <div>
+    <>
       <Head>
         <meta property="og:image" content={data.cardImageURL} key="image" />
         <meta property="og:title" content={data.title} key="title" />
-        <meta property="og:description" content={data?.description ?? ""} />
+        <meta
+          property="og:description"
+          content={data.description}
+          key="description"
+        />
 
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="400" />
         <meta property="og:image:height" content="400"></meta>
       </Head>
-      <div className="d-flex align-item-center justify-content-center">
+      <div className="d-flex align-item-center justify-content-center height-100">
         <iframe
           src={`https://dynamiclinks-9d64a.web.app/shareProfile?${params}=${userCode}`}
           className="iframe-cont"
           title="W3Schools Free Online Web Tutorials"
         ></iframe>
       </div>
-    </div>
+    </>
   );
 }
 
