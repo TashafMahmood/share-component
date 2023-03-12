@@ -34,7 +34,7 @@ function ShareProfile(props) {
         <iframe
           src={`https://dynamiclinks-9d64a.web.app/shareProfile?${params}=${userCode}`}
           className="iframe-cont"
-          title="W3Schools Free Online Web Tutorials"
+          title=""
         ></iframe>
       </div>
     </>
