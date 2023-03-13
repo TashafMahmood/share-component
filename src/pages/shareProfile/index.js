@@ -23,15 +23,7 @@ function ShareProfile(props) {
           content={data.description}
           key="description"
         />
-        {/* <meta property="og:image" content={data.cardImageURL} key="image" /> */}
-        <meta
-          property="og:image"
-          content={
-            "https://fastly.picsum.photos/id/244/800/800.jpg?hmac=jgsiFg6e_JXi7frGJ_rPkn83xmsJ7BVmehunh8bxcbw"
-          }
-          key="image"
-        />
-
+        <meta property="og:image" content={data.cardImageURL} key="image" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="300" />
         <meta property="og:image:height" content="300" />
