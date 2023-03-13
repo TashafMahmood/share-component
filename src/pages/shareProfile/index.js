@@ -26,8 +26,8 @@ function ShareProfile(props) {
         />
 
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200"></meta>
+        <meta property="og:image:width" content="300" />
+        <meta property="og:image:height" content="300"></meta>
       </Head>
       <div className="d-flex align-item-center justify-content-center height-100">
         <iframe
