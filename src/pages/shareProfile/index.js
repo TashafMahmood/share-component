@@ -17,17 +17,22 @@ function ShareProfile(props) {
   return (
     <>
       <Head>
-        <meta property="og:image" content={data.cardImageURL} key="image" />
         <meta property="og:title" content={data.title} key="title" />
         <meta
           property="og:description"
           content={data.description}
           key="description"
         />
+        <meta property="og:image" content={data.cardImageURL} key="image" />
+        <meta
+          property="og:image"
+          content={"https://www.w3schools.com/images/w3schools_logo_436_2.png"}
+          key="image"
+        />
 
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="300" />
-        <meta property="og:image:height" content="300"></meta>
+        <meta property="og:image:height" content="300" />
       </Head>
       <div className="d-flex align-item-center justify-content-center height-100">
         <iframe
