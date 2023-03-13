@@ -25,7 +25,7 @@ function ShareProfile(props) {
         />
         <meta property="og:image" content={data.cardImageURL} key="image" />
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="400" />
+        <meta property="og:image:width" content="600" />
         <meta property="og:image:height" content="400" />
       </Head>
       <div className="d-flex align-item-center justify-content-center height-100">
