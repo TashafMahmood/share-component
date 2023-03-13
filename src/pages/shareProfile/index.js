@@ -25,7 +25,9 @@ function ShareProfile(props) {
         />
         <meta
           property="og:image"
-          content={"/63e25d457b974f710886064d1678191943622_11zon.jpg"}
+          content={
+            "https://test.elred.io/63e25d457b974f710886064d1678191943622_11zon.jpg"
+          }
           key="image"
         />
         <meta property="og:image:type" content="image/png" />
