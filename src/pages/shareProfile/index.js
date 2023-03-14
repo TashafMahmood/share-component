@@ -1,6 +1,7 @@
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect } from "react";
 
 function ShareProfile(props) {
   const { data } = props;
@@ -8,6 +9,17 @@ function ShareProfile(props) {
 
   const userCode = query?.userCode ? query?.userCode : query?.companyUserCode;
   const params = query?.userCode ? "userCode" : "companyUserCode";
+
+  useEffect(() => {
+    const a = document.createElement("a");
+    // a.target = "_blank";
+    a.href = `https://dynamiclinks-9d64a.web.app/shareProfile?${params}=${userCode}`;
+    // setTimeout(() => {
+    // }, 1000);
+    a.click();
+
+    // console.log(params, userCode);
+  }, []);
 
   // console.log("datayyyy", data);
 
@@ -29,11 +41,18 @@ function ShareProfile(props) {
         <meta property="og:image:height" content="300" />
       </Head>
       <div className="d-flex align-item-center justify-content-center height-100">
-        <iframe
+        <Link
+          target="_blank"
+          href={`https://dynamiclinks-9d64a.web.app/shareProfile?${params}=${userCode}`}
+          // onClick={() => {}}
+        >
+          click me{" "}
+        </Link>
+        {/* <iframe
           src={`https://dynamiclinks-9d64a.web.app/shareProfile?${params}=${userCode}`}
           className="iframe-cont"
           title=""
-        ></iframe>
+        ></iframe> */}
       </div>
     </>
   );
