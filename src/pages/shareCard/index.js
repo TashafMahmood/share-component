@@ -1,3 +1,4 @@
+import { baseURL, redirectURL } from "@/config";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
@@ -11,7 +12,7 @@ function ShareCard(props) {
 
   useEffect(() => {
     const a = document.createElement("a");
-    a.href = `https://dynamiclinks-9d64a.web.app/shareCard?${params}=${userCode}`;
+    a.href = `${redirectURL}shareCard?${params}=${userCode}`;
     a.click();
   }, []);
 
@@ -33,11 +34,11 @@ function ShareCard(props) {
         <meta property="og:description" content={data?.description ?? ""} />
       </Head>
       <div className="d-flex align-item-center justify-content-center height-100">
-        <iframe
+        {/* <iframe
           src={`https://dynamiclinks-9d64a.web.app/shareCard?${params}=${userCode}`}
           className="iframe-cont"
           title="W3Schools Free Online Web Tutorials"
-        ></iframe>
+        ></iframe> */}
       </div>
     </>
   );
@@ -49,7 +50,7 @@ export async function getServerSideProps({ res, query }) {
   const params = query?.userCode ? "userCode" : "companyUserCode";
 
   const response = await fetch(
-    `https://dev.elred.io/noSessionPreviewCardScreenshot?${params}=${userCode}`,
+    `${baseURL}noSessionPreviewCardScreenshot?${params}=${userCode}`,
     {
       method: "POST",
       headers: {

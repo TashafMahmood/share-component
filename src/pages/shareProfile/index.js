@@ -1,5 +1,5 @@
+import { baseURL, redirectURL } from "@/config";
 import Head from "next/head";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 
@@ -12,7 +12,7 @@ function ShareProfile(props) {
 
   useEffect(() => {
     const a = document.createElement("a");
-    a.href = `https://dynamiclinks-9d64a.web.app/shareProfile?${params}=${userCode}`;
+    a.href = `${redirectURL}shareProfile?${params}=${userCode}`;
     a.click();
   }, []);
 
@@ -50,7 +50,7 @@ export async function getServerSideProps({ res, query }) {
   const params = query?.userCode ? "userCode" : "companyUserCode";
 
   const response = await fetch(
-    `https://dev.elred.io/noSessionPreviewCardScreenshot?${params}=${userCode}`,
+    `${baseURL}noSessionPreviewCardScreenshot?${params}=${userCode}`,
     {
       method: "POST",
       headers: {
