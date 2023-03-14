@@ -12,16 +12,9 @@ function ShareProfile(props) {
 
   useEffect(() => {
     const a = document.createElement("a");
-    // a.target = "_blank";
     a.href = `https://dynamiclinks-9d64a.web.app/shareProfile?${params}=${userCode}`;
-    // setTimeout(() => {
-    // }, 1000);
     a.click();
-
-    // console.log(params, userCode);
   }, []);
-
-  // console.log("datayyyy", data);
 
   if (!userCode) {
     return <div>invalid user code</div>;
