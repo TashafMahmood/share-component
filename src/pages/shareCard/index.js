@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect } from "react";
 
 function ShareCard(props) {
   const { data } = props;
@@ -8,19 +8,22 @@ function ShareCard(props) {
 
   const userCode = query?.userCode ? query?.userCode : query?.companyUserCode;
   const params = query?.userCode ? "userCode" : "companyUserCode";
-  4;
 
-  console.log("datayyyy", data);
+  useEffect(() => {
+    const a = document.createElement("a");
+    a.href = `https://dynamiclinks-9d64a.web.app/shareCard?${params}=${userCode}`;
+    a.click();
+  }, []);
 
   if (!userCode) {
     return <div>invalid user code</div>;
   }
   return (
-    <div>
+    <>
       <Head>
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="600" />
-        <meta property="og:image:height" content="400" />
+        <meta property="og:image:width" content="300" />
+        <meta property="og:image:height" content="300" />
         <meta
           property="og:image"
           content={data?.cardImageURL ?? ""}
@@ -29,14 +32,14 @@ function ShareCard(props) {
         <meta property="og:title" content={data?.title ?? ""} key="title" />
         <meta property="og:description" content={data?.description ?? ""} />
       </Head>
-      <div className="d-flex align-item-center justify-content-center">
+      <div className="d-flex align-item-center justify-content-center height-100">
         <iframe
-          src={`https://dynamiclinks-9d64a.web.app/shareProfile?${params}=${userCode}`}
+          src={`https://dynamiclinks-9d64a.web.app/shareCard?${params}=${userCode}`}
           className="iframe-cont"
           title="W3Schools Free Online Web Tutorials"
         ></iframe>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -63,7 +66,7 @@ export async function getServerSideProps({ res, query }) {
   const result = data?.result && data?.result?.length && data?.result[0];
 
   return {
-    props: { data: result }, // will be passed to the page component as props
+    props: { data: result ?? {} }, // will be passed to the page component as props
   };
 }
 export default ShareCard;
