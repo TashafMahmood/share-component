@@ -34,13 +34,6 @@ function ShareProfile(props) {
         <meta property="og:image:height" content="300" />
       </Head>
       <div className="d-flex align-item-center justify-content-center height-100">
-        <Link
-          target="_blank"
-          href={`https://dynamiclinks-9d64a.web.app/shareProfile?${params}=${userCode}`}
-          // onClick={() => {}}
-        >
-          click me{" "}
-        </Link>
         {/* <iframe
           src={`https://dynamiclinks-9d64a.web.app/shareProfile?${params}=${userCode}`}
           className="iframe-cont"
