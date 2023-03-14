@@ -30,7 +30,7 @@ function ShareCard(props) {
           content={data?.cardImageURL ?? ""}
           key="image"
         />
-        <meta property="og:title" content={data?.title ?? ""} key="title" />
+        <meta property="og:title" content={data?.cardTitle ?? ""} key="title" />
         <meta property="og:description" content={data?.description ?? ""} />
       </Head>
       <div className="d-flex align-item-center justify-content-center height-100">

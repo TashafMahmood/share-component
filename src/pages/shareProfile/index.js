@@ -22,7 +22,7 @@ function ShareProfile(props) {
   return (
     <>
       <Head>
-        <meta property="og:title" content={data.title} key="title" />
+        <meta property="og:title" content={data.profileTitle} key="title" />
         <meta
           property="og:description"
           content={data.description}
