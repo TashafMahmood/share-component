@@ -11,9 +11,9 @@ function ShareCard(props) {
   const params = query?.userCode ? "userCode" : "companyUserCode";
 
   useEffect(() => {
-    const a = document.createElement("a");
-    a.href = `${redirectURL}shareCard?${params}=${userCode}`;
-    a.click();
+    // const a = document.createElement("a");
+    // a.href = `${redirectURL}shareCard?${params}=${userCode}`;
+    // a.click();
   }, []);
 
   if (!userCode) {
@@ -34,6 +34,7 @@ function ShareCard(props) {
         <meta property="og:description" content={data?.description ?? ""} />
       </Head>
       <div className="d-flex align-item-center justify-content-center height-100">
+        <img style={{ marginTop: 10 }} src="/Frame 15133.jpg" alt="img" />
         {/* <iframe
           src={`https://dynamiclinks-9d64a.web.app/shareCard?${params}=${userCode}`}
           className="iframe-cont"
