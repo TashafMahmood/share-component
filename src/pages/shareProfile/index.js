@@ -34,13 +34,14 @@ function ShareProfile(props) {
         <meta property="og:image:height" content="300" />
       </Head>
       <div className="d-flex align-item-center justify-content-center height-100">
-        <img style={{ marginTop: 10 }} src="/Frame 15133.jpg" alt="img" />
+        {/* <img style={{ marginTop: 10 }} src="/Frame 15133.jpg" alt="img" /> */}
 
-        {/* <iframe
-          src={`https://dynamiclinks-9d64a.web.app/shareProfile?${params}=${userCode}`}
+        <iframe
+          src="https://elred-webview.vercel.app/"
+          // src={`https://dynamiclinks-9d64a.web.app/shareProfile?${params}=${userCode}`}
           className="iframe-cont"
           title=""
-        ></iframe> */}
+        ></iframe>
       </div>
     </>
   );
