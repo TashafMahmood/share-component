@@ -34,12 +34,11 @@ function ShareCard(props) {
         <meta property="og:description" content={data?.description ?? ""} />
       </Head>
       <div className="d-flex align-item-center justify-content-center height-100">
-        <img style={{ marginTop: 10 }} src="/Frame 15133.jpg" alt="img" />
-        {/* <iframe
-          src={`https://dynamiclinks-9d64a.web.app/shareCard?${params}=${userCode}`}
+        <iframe
+          src={`https://elred-webview.vercel.app/share-card?userCode=${userCode}`}
           className="iframe-cont"
           title="W3Schools Free Online Web Tutorials"
-        ></iframe> */}
+        ></iframe>
       </div>
     </>
   );
