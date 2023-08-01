@@ -37,6 +37,7 @@ function ShareProfile(props) {
         {/* <img style={{ marginTop: 10 }} src="/Frame 15133.jpg" alt="img" /> */}
 
         <iframe
+          allow="web-share"
           src={`https://elred-webview.vercel.app?${params}=${userCode}`}
           // src={`https://dynamiclinks-9d64a.web.app/shareProfile?${params}=${userCode}`}
           className="iframe-cont"
