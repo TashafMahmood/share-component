@@ -36,7 +36,7 @@ function ShareCard(props) {
       <div className="d-flex align-item-center justify-content-center height-100">
         <iframe
           allow="web-share"
-          src={`https://elred-webview.vercel.app/share-card?userCode=${userCode}`}
+          src={`https://demo1.elred.io/share-card?userCode=${userCode}`}
           className="iframe-cont"
           title="W3Schools Free Online Web Tutorials"
         ></iframe>
