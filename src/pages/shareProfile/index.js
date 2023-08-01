@@ -1,7 +1,9 @@
 import { baseURL, redirectURL } from "@/config";
 import Head from "next/head";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
+import styles from "./index.module.css";
 
 function ShareProfile(props) {
   const { data } = props;
@@ -17,7 +19,19 @@ function ShareProfile(props) {
   }, []);
 
   if (!userCode) {
-    return <div>invalid user code</div>;
+    return (
+      <div className="d-flex flex-column align-items-center justify-content-center height-100">
+        <Image
+          width={161}
+          height={178}
+          src={"/noun-no-internet-access-4532233 1.png"}
+        />
+        <div className={styles.oops_text}>Oops!</div>
+        <div className={styles.error_text}>
+          Something went wrong, please try again
+        </div>
+      </div>
+    );
   }
   return (
     <>
@@ -56,6 +70,7 @@ export async function getServerSideProps({ res, query }) {
   const response = await fetch(
     `${baseURL}noSessionPreviewCardScreenshot?${params}=${userCode}`,
     {
+      cache: "no-cache",
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -64,10 +79,10 @@ export async function getServerSideProps({ res, query }) {
     }
   );
 
-  console.log(response);
+  // console.log(response);
 
   const data = await response.json();
-  console.log("fetch image data", data);
+  // console.log("fetch image data", data);
   const result = data?.result && data?.result?.length && data?.result[0];
 
   return {
