@@ -21,9 +21,7 @@ function Dummyevent(props) {
         <meta property="og:image:height" content="300" />
         <meta
           property="og:image"
-          content={
-            "/events/screenshots_63aad78bb38aa1d755b495611691057330867.png"
-          }
+          content={"https://test.elred.io/events/1.png"}
           key="image"
         />
         <meta property="og:title" content={"dummy events"} key="title" />
