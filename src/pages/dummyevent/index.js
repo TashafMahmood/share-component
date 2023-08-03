@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import styles from "./index.module.css";
 
 function Dummyevent(props) {
   const images = ["2.png", `3.png`, "5.png", `7.png`];
@@ -42,8 +43,9 @@ function Dummyevent(props) {
         >
           <Image
             src={`/events/${imageName}`}
-            style={{ height: "100vh" }}
+            // style={{ height: "100vh" }}
             height={100}
+            className={styles.image_container}
             width={350}
           />
         </div>
