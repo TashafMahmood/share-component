@@ -16,7 +16,6 @@ function Dummyevent(props) {
   return (
     <>
       <Head>
-        <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="300" />
         <meta property="og:image:height" content="300" />
         <meta
