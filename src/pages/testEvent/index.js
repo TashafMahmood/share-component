@@ -1,7 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import { useRouter } from "next/router";
 import Head from "next/head";
 import styles from "./index.module.css";
 
@@ -32,7 +29,6 @@ function testEvent(props) {
         <iframe
           allow="web-share"
           src={`https://demo1.elred.io/testEvent`}
-          // src={`https://dynamiclinks-9d64a.web.app/shareProfile?${params}=${userCode}`}
           className="iframe-cont"
           title=""
         ></iframe>
