@@ -4,4 +4,6 @@
   max-width: 350px;
   margin-top: 20px;
   /* background: fit; */
+  max-width: 100%;
+  height: auto;
 }
