@@ -1,4 +1,4 @@
-import { baseURL } from "@/config";
+import { baseURL, webviewURL } from "@/config";
 import Head from "next/head";
 
 import NotFound from "@/component/notFound";
@@ -26,7 +26,7 @@ function ShareCard(props) {
       <div className="d-flex align-item-center justify-content-center height-100">
         <iframe
           allow="web-share"
-          src={`https://demo1.elred.io/share-card?userCode=${userCode}`}
+          src={`${webviewURL}share-card?userCode=${userCode}`}
           className="iframe-cont"
           title="W3Schools Free Online Web Tutorials"
         ></iframe>

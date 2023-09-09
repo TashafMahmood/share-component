@@ -1,5 +1,5 @@
 import NotFound from "@/component/notFound";
-import { baseURL } from "@/config";
+import { baseURL, webviewURL } from "@/config";
 import Head from "next/head";
 
 function ShareNeed(props) {
@@ -25,7 +25,7 @@ function ShareNeed(props) {
       <div className="d-flex align-item-center justify-content-center height-100">
         <iframe
           allow="web-share"
-          src={`https://demo1.elred.io/my-bio/leads/responding-leads?leadId=${leadId}&userCode=${userCode}&t=858659`}
+          src={`${webviewURL}my-bio/leads/responding-leads?leadId=${leadId}&userCode=${userCode}`}
           className="iframe-cont"
           title=""
         ></iframe>

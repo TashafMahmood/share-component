@@ -1,4 +1,4 @@
-import { baseURL } from "@/config";
+import { baseURL, webviewURL } from "@/config";
 import Head from "next/head";
 import NotFound from "@/component/notFound";
 
@@ -25,7 +25,7 @@ function ShareProfile(props) {
       <div className="d-flex align-item-center justify-content-center height-100">
         <iframe
           allow="web-share"
-          src={`https://demo1.elred.io?userCode=${userCode}`}
+          src={`${webviewURL}?userCode=${userCode}`}
           className="iframe-cont"
           title=""
         ></iframe>
