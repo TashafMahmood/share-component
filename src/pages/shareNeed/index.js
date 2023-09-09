@@ -35,13 +35,15 @@ function ShareNeed(props) {
 }
 // https://demo1.elred.io/my-bio/leads/responding-leads?leadId=64face0939333f74a6861907&userCode=63aad78bb38aa1d755b49561&t=858659
 // https://demo1.elred.io/my-bio/needs/need?needId=64facc3139333f74a686139f&userCode=63aad78bb38aa1d755b49561&t=882489
+
+//test.elred.io/shareNeed?needId=64facc3139333f74a686139f&needOwner_userCode=63aad78bb38aa1d755b49561&t=960821
 export async function getServerSideProps({ res, query }) {
   res.setHeader("Cache-Control", "no-store");
   const needId = query?.needId ?? "";
-  const leadOwner_userCode = query?.leadOwner_userCode ?? "";
+  const needOwner_userCode = query?.needOwner_userCode ?? "";
 
   const response = await fetch(
-    `${baseURL}noSessionPreviewCardScreenshot?"userCode=${leadOwner_userCode}`,
+    `${baseURL}noSessionPreviewCardScreenshot?userCode=${needOwner_userCode}`,
     {
       cache: "no-cache",
       method: "POST",

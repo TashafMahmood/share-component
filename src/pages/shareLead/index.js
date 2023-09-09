@@ -40,7 +40,7 @@ export async function getServerSideProps({ res, query }) {
   const leadOwner_userCode = query?.leadOwner_userCode ?? "";
 
   const response = await fetch(
-    `${baseURL}noSessionPreviewCardScreenshot?"userCode=${leadOwner_userCode}`,
+    `${baseURL}noSessionPreviewCardScreenshot?userCode=${leadOwner_userCode}`,
     {
       cache: "no-cache",
       method: "POST",
