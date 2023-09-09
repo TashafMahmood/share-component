@@ -1,11 +1,11 @@
+import NotFound from "@/component/notFound";
 import { baseURL } from "@/config";
 import Head from "next/head";
-import NotFound from "@/component/notFound";
 
-function ShareProfile(props) {
-  const { data, userCode } = props;
+function ShareNeed(props) {
+  const { data, needId, userCode } = props;
 
-  if (!userCode) {
+  if (!userCode && !needId) {
     return <NotFound />;
   }
   return (
@@ -25,7 +25,7 @@ function ShareProfile(props) {
       <div className="d-flex align-item-center justify-content-center height-100">
         <iframe
           allow="web-share"
-          src={`https://demo1.elred.io?userCode=${userCode}`}
+          src={`https://demo1.elred.io/my-bio/needs/need?needId=${needId}&userCode=${userCode}&t=882489`}
           className="iframe-cont"
           title=""
         ></iframe>
@@ -33,13 +33,15 @@ function ShareProfile(props) {
     </>
   );
 }
-
+// https://demo1.elred.io/my-bio/leads/responding-leads?leadId=64face0939333f74a6861907&userCode=63aad78bb38aa1d755b49561&t=858659
+// https://demo1.elred.io/my-bio/needs/need?needId=64facc3139333f74a686139f&userCode=63aad78bb38aa1d755b49561&t=882489
 export async function getServerSideProps({ res, query }) {
   res.setHeader("Cache-Control", "no-store");
-  const userCode = query.userCode ?? "";
+  const needId = query?.needId ?? "";
+  const leadOwner_userCode = query?.leadOwner_userCode ?? "";
 
   const response = await fetch(
-    `${baseURL}noSessionPreviewCardScreenshot?userCode=${userCode}`,
+    `${baseURL}noSessionPreviewCardScreenshot?"userCode=${leadOwner_userCode}`,
     {
       cache: "no-cache",
       method: "POST",
@@ -54,7 +56,7 @@ export async function getServerSideProps({ res, query }) {
   const result = data?.result && data?.result?.length && data?.result[0];
 
   return {
-    props: { data: result, userCode: userCode }, // will be passed to the page component as props
+    props: { data: result, userCode: leadOwner_userCode, needId }, // will be passed to the page component as props
   };
 }
-export default ShareProfile;
+export default ShareNeed;

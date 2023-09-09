@@ -1,34 +1,33 @@
+import NotFound from "@/component/notFound";
 import { baseURL } from "@/config";
 import Head from "next/head";
 
-import NotFound from "@/component/notFound";
+function ShareNeed(props) {
+  const { data, leadId, userCode } = props;
 
-function ShareCard(props) {
-  const { data, userCode } = props;
-
-  if (!userCode) {
+  if (!userCode && !leadId) {
     return <NotFound />;
   }
   return (
     <>
       <Head>
+        <meta property="og:title" content={data.profileTitle} key="title" />
+        <meta
+          property="og:description"
+          content={data.description}
+          key="description"
+        />
+        <meta property="og:image" content={data.cardImageURL} key="image" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="300" />
         <meta property="og:image:height" content="300" />
-        <meta
-          property="og:image"
-          content={data?.cardImageURL ?? ""}
-          key="image"
-        />
-        <meta property="og:title" content={data?.cardTitle ?? ""} key="title" />
-        <meta property="og:description" content={data?.description ?? ""} />
       </Head>
       <div className="d-flex align-item-center justify-content-center height-100">
         <iframe
           allow="web-share"
-          src={`https://demo1.elred.io/share-card?userCode=${userCode}`}
+          src={`https://demo1.elred.io/my-bio/leads/responding-leads?leadId=${leadId}&userCode=${userCode}&t=858659`}
           className="iframe-cont"
-          title="W3Schools Free Online Web Tutorials"
+          title=""
         ></iframe>
       </div>
     </>
@@ -37,10 +36,11 @@ function ShareCard(props) {
 
 export async function getServerSideProps({ res, query }) {
   res.setHeader("Cache-Control", "no-store");
-  const userCode = query?.userCode ?? "";
+  const leadId = query?.leadId ?? "";
+  const leadOwner_userCode = query?.leadOwner_userCode ?? "";
 
   const response = await fetch(
-    `${baseURL}noSessionPreviewCardScreenshot?userCode=${userCode}`,
+    `${baseURL}noSessionPreviewCardScreenshot?"userCode=${leadOwner_userCode}`,
     {
       cache: "no-cache",
       method: "POST",
@@ -55,7 +55,7 @@ export async function getServerSideProps({ res, query }) {
   const result = data?.result && data?.result?.length && data?.result[0];
 
   return {
-    props: { data: result ?? {}, userCode: userCode }, // will be passed to the page component as props
+    props: { data: result, userCode: leadOwner_userCode, leadId }, // will be passed to the page component as props
   };
 }
-export default ShareCard;
+export default ShareNeed;
