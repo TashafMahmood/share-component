@@ -11,13 +11,17 @@ function ShareNeed(props) {
   return (
     <>
       <Head>
-        {/* <meta property="og:title" content={data.profileTitle} key="title" />
+        {/* <meta property="og:title" content={data.profileTitle} key="title" /> */}
         <meta
           property="og:description"
-          content={data.description}
+          content={data.needDescription}
           key="description"
-        /> */}
-        <meta property="og:image" content={data.needImageURL} key="image" />
+        />
+        <meta
+          property="og:image"
+          content={data?.needImageURL ?? "/"}
+          key="image"
+        />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="300" />
         <meta property="og:image:height" content="300" />
