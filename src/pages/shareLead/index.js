@@ -11,13 +11,17 @@ function ShareNeed(props) {
   return (
     <>
       <Head>
-        <meta property="og:title" content={data.profileTitle} key="title" />
+        {/* <meta property="og:title" content={data.profileTitle} key="title" /> */}
         <meta
           property="og:description"
-          content={data.description}
+          content={data.leadsDescription}
           key="description"
         />
-        <meta property="og:image" content={data.cardImageURL} key="image" />
+        <meta
+          property="og:image"
+          content={data.leadImageURL ?? "/"}
+          key="image"
+        />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="300" />
         <meta property="og:image:height" content="300" />
@@ -39,8 +43,10 @@ export async function getServerSideProps({ res, query }) {
   const leadId = query?.leadId ?? "";
   const leadOwner_userCode = query?.leadOwner_userCode ?? "";
 
+  // webViewPreviewLeadScreenshot?leadId=64d9ebac27dce30ebad0888e&userCode=63e4912479b7c5496906094d
+
   const response = await fetch(
-    `${baseURL}noSessionPreviewCardScreenshot?userCode=${leadOwner_userCode}`,
+    `${baseURL}webViewPreviewLeadScreenshot?leadId=${leadId}&userCode=${leadOwner_userCode}`,
     {
       cache: "no-cache",
       method: "POST",
@@ -52,6 +58,13 @@ export async function getServerSideProps({ res, query }) {
   );
 
   const data = await response.json();
+
+  console.log(
+    leadOwner_userCode,
+    "hhhhhhh",
+    `${baseURL}webViewPreviewLeadScreenshot?leadId=${leadId}&userCode=${leadOwner_userCode}`,
+    data
+  );
   const result = data?.result && data?.result?.length && data?.result[0];
 
   return {
