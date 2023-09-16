@@ -11,13 +11,13 @@ function ShareNeed(props) {
   return (
     <>
       <Head>
-        <meta property="og:title" content={data.profileTitle} key="title" />
+        {/* <meta property="og:title" content={data.profileTitle} key="title" />
         <meta
           property="og:description"
           content={data.description}
           key="description"
-        />
-        <meta property="og:image" content={data.cardImageURL} key="image" />
+        /> */}
+        <meta property="og:image" content={data.needImageURL} key="image" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="300" />
         <meta property="og:image:height" content="300" />
@@ -43,7 +43,7 @@ export async function getServerSideProps({ res, query }) {
   const needOwner_userCode = query?.needOwner_userCode ?? "";
 
   const response = await fetch(
-    `${baseURL}noSessionPreviewCardScreenshot?userCode=${needOwner_userCode}`,
+    `${baseURL}webViewPreviewNeedScreenshot?userCode=${needOwner_userCode}&needId=${needId}`,
     {
       cache: "no-cache",
       method: "POST",
@@ -55,7 +55,10 @@ export async function getServerSideProps({ res, query }) {
   );
 
   const data = await response.json();
+
   const result = data?.result && data?.result?.length && data?.result[0];
+
+  console.log(result);
 
   return {
     props: { data: result, userCode: needOwner_userCode, needId }, // will be passed to the page component as props

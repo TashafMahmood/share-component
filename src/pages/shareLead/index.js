@@ -19,10 +19,7 @@ function ShareNeed(props) {
         />
         <meta
           property="og:image"
-          content={
-            "https://elreduploads.s3.ap-south-1.amazonaws.com/screenshots%2F647722e3546d98d93063bf231694838548800.png" ??
-            "/"
-          }
+          content={data.leadImageURL ?? "/"}
           key="image"
         />
         <meta property="og:image:type" content="image/png" />
