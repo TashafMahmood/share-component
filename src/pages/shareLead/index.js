@@ -11,7 +11,7 @@ function ShareNeed(props) {
   return (
     <>
       <Head>
-        {/* <meta property="og:title" content={data.profileTitle} key="title" /> */}
+        <meta property="og:title" content={data.leadTitle} key="title" />
         <meta
           property="og:description"
           content={data.leadsDescription}
