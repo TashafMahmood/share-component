@@ -5,18 +5,22 @@ import Head from "next/head";
 function ShareNeed(props) {
   const { data, needId, userCode } = props;
 
+  console.log(data, "...................");
+
   if (!userCode && !needId) {
     return <NotFound />;
   }
   return (
     <>
       <Head>
-        {/* <meta property="og:title" content={data.profileTitle} key="title" /> */}
-        <meta
-          property="og:description"
-          content={data.needDescription}
-          key="description"
-        />
+        <meta property="og:title" content={data.needDescription} key="title" />
+        {data?.otherTags?.length && (
+          <meta
+            property="og:description"
+            content={`Other Tags: ${data?.otherTags?.join(",")}`}
+            key="description"
+          />
+        )}
         <meta
           property="og:image"
           content={data?.needImageURL ?? "/"}
