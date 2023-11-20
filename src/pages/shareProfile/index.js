@@ -30,7 +30,7 @@ function ShareProfile(props) {
         <meta property="og:image:width" content="300" />
         <meta property="og:image:height" content="300" />
       </Head>
-      <div className="d-flex align-item-center justify-content-center height-100">
+      <div className="align-item-center justify-content-center height-100">
         <iframe
           allow="web-share"
           src={`${webviewURL}?userCode=${userCode}`}
